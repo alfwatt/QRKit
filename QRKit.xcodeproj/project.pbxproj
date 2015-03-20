@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		7510745019D0ACFC00C85851 /* QRKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510744F19D0ACFC00C85851 /* QRKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7510745A19D0ACFC00C85851 /* QRKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7510745919D0ACFC00C85851 /* QRKitTests.m */; };
+		7510746519D0AE5500C85851 /* QRCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510746319D0AE5500C85851 /* QRCoder.h */; };
+		7510746619D0AE5500C85851 /* QRCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7510746419D0AE5500C85851 /* QRCoder.m */; };
+		7510746919D0AE8100C85851 /* QRCodeScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510746719D0AE8100C85851 /* QRCodeScanner.h */; };
+		7510746A19D0AE8100C85851 /* QRCodeScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 7510746819D0AE8100C85851 /* QRCodeScanner.m */; };
+		7510746F19D0C6B200C85851 /* QRCodeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510746D19D0C6B200C85851 /* QRCodeView.h */; };
+		7510747019D0C6B200C85851 /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7510746E19D0C6B200C85851 /* QRCodeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +24,12 @@
 		7510745519D0ACFC00C85851 /* QRKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QRKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7510745819D0ACFC00C85851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7510745919D0ACFC00C85851 /* QRKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRKitTests.m; sourceTree = "<group>"; };
+		7510746319D0AE5500C85851 /* QRCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCoder.h; sourceTree = "<group>"; };
+		7510746419D0AE5500C85851 /* QRCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCoder.m; sourceTree = "<group>"; };
+		7510746719D0AE8100C85851 /* QRCodeScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeScanner.h; sourceTree = "<group>"; };
+		7510746819D0AE8100C85851 /* QRCodeScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeScanner.m; sourceTree = "<group>"; };
+		7510746D19D0C6B200C85851 /* QRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeView.h; sourceTree = "<group>"; };
+		7510746E19D0C6B200C85851 /* QRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +73,12 @@
 			children = (
 				7510744F19D0ACFC00C85851 /* QRKit.h */,
 				7510744D19D0ACFC00C85851 /* Supporting Files */,
+				7510746319D0AE5500C85851 /* QRCoder.h */,
+				7510746419D0AE5500C85851 /* QRCoder.m */,
+				7510746D19D0C6B200C85851 /* QRCodeView.h */,
+				7510746E19D0C6B200C85851 /* QRCodeView.m */,
+				7510746719D0AE8100C85851 /* QRCodeScanner.h */,
+				7510746819D0AE8100C85851 /* QRCodeScanner.m */,
 			);
 			path = QRKit;
 			sourceTree = "<group>";
@@ -98,6 +116,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7510745019D0ACFC00C85851 /* QRKit.h in Headers */,
+				7510746519D0AE5500C85851 /* QRCoder.h in Headers */,
+				7510746919D0AE8100C85851 /* QRCodeScanner.h in Headers */,
+				7510746F19D0C6B200C85851 /* QRCodeView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +217,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7510746A19D0AE8100C85851 /* QRCodeScanner.m in Sources */,
+				7510746619D0AE5500C85851 /* QRCoder.m in Sources */,
+				7510747019D0C6B200C85851 /* QRCodeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
