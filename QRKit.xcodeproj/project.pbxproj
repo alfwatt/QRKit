@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7510745019D0ACFC00C85851 /* QRKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510744F19D0ACFC00C85851 /* QRKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7510745A19D0ACFC00C85851 /* QRKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7510745919D0ACFC00C85851 /* QRKitTests.m */; };
 		7510746519D0AE5500C85851 /* QRCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510746319D0AE5500C85851 /* QRCoder.h */; };
 		7510746619D0AE5500C85851 /* QRCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7510746419D0AE5500C85851 /* QRCoder.m */; };
 		7510746919D0AE8100C85851 /* QRCodeScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510746719D0AE8100C85851 /* QRCodeScanner.h */; };
@@ -21,9 +20,6 @@
 		7510744A19D0ACFC00C85851 /* QRKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7510744E19D0ACFC00C85851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7510744F19D0ACFC00C85851 /* QRKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRKit.h; sourceTree = "<group>"; };
-		7510745519D0ACFC00C85851 /* QRKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QRKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7510745819D0ACFC00C85851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7510745919D0ACFC00C85851 /* QRKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRKitTests.m; sourceTree = "<group>"; };
 		7510746319D0AE5500C85851 /* QRCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCoder.h; sourceTree = "<group>"; };
 		7510746419D0AE5500C85851 /* QRCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCoder.m; sourceTree = "<group>"; };
 		7510746719D0AE8100C85851 /* QRCodeScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeScanner.h; sourceTree = "<group>"; };
@@ -40,13 +36,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7510745219D0ACFC00C85851 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -54,7 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				7510744C19D0ACFC00C85851 /* QRKit */,
-				7510745619D0ACFC00C85851 /* QRKitTests */,
 				7510744B19D0ACFC00C85851 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,7 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				7510744A19D0ACFC00C85851 /* QRKit.framework */,
-				7510745519D0ACFC00C85851 /* QRKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,23 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				7510744E19D0ACFC00C85851 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		7510745619D0ACFC00C85851 /* QRKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				7510745919D0ACFC00C85851 /* QRKitTests.m */,
-				7510745719D0ACFC00C85851 /* Supporting Files */,
-			);
-			path = QRKitTests;
-			sourceTree = "<group>";
-		};
-		7510745719D0ACFC00C85851 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				7510745819D0ACFC00C85851 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -143,23 +113,6 @@
 			productReference = 7510744A19D0ACFC00C85851 /* QRKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7510745419D0ACFC00C85851 /* QRKitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7510746019D0ACFC00C85851 /* Build configuration list for PBXNativeTarget "QRKitTests" */;
-			buildPhases = (
-				7510745119D0ACFC00C85851 /* Sources */,
-				7510745219D0ACFC00C85851 /* Frameworks */,
-				7510745319D0ACFC00C85851 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = QRKitTests;
-			productName = QRKitTests;
-			productReference = 7510745519D0ACFC00C85851 /* QRKitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -170,9 +123,6 @@
 				ORGANIZATIONNAME = iStumbler;
 				TargetAttributes = {
 					7510744919D0ACFC00C85851 = {
-						CreatedOnToolsVersion = 6.0.1;
-					};
-					7510745419D0ACFC00C85851 = {
 						CreatedOnToolsVersion = 6.0.1;
 					};
 				};
@@ -190,20 +140,12 @@
 			projectRoot = "";
 			targets = (
 				7510744919D0ACFC00C85851 /* QRKit */,
-				7510745419D0ACFC00C85851 /* QRKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7510744819D0ACFC00C85851 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7510745319D0ACFC00C85851 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -220,14 +162,6 @@
 				7510746A19D0AE8100C85851 /* QRCodeScanner.m in Sources */,
 				7510746619D0AE5500C85851 /* QRCoder.m in Sources */,
 				7510747019D0C6B200C85851 /* QRCodeView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7510745119D0ACFC00C85851 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7510745A19D0ACFC00C85851 /* QRKitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,36 +282,6 @@
 			};
 			name = Release;
 		};
-		7510746119D0ACFC00C85851 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = QRKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		7510746219D0ACFC00C85851 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = QRKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -397,14 +301,7 @@
 				7510745F19D0ACFC00C85851 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		7510746019D0ACFC00C85851 /* Build configuration list for PBXNativeTarget "QRKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7510746119D0ACFC00C85851 /* Debug */,
-				7510746219D0ACFC00C85851 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

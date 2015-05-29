@@ -1,11 +1,4 @@
-//
-//  QRCodeReader.h
-//  QRKit
-//
-//  Created by alf on 9/22/14.
-//  Copyright (c) 2014 iStumbler. All rights reserved.
-//
-
+#include "TargetConditionals.h"
 #import <Foundation/Foundation.h>
 
 #if TARGET_OS_IPHONE
@@ -28,7 +21,7 @@
 
 #endif
 
-- (NSString*) srringFromCoreImage:(CGImageRef) image;
+- (NSString*) srringFromImageRef:(CGImageRef) image;
 - (CGImageRef) imageRefFromString:(NSString*) string;
 
 @end

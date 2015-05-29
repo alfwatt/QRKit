@@ -1,13 +1,15 @@
-//
-//  QRCodeView.h
-//  QRKit
-//
-//  Created by alf on 9/22/14.
-//  Copyright (c) 2014 iStumbler. All rights reserved.
-//
+#include "TargetConditionals.h"
 
+#if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
 
 @interface QRCodeView : UIView
+#else
+#import <AppKit/AppKit.h>
+
+@interface QRCodeView : NSView
+#endif
+
+
 
 @end
