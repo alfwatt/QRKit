@@ -9,10 +9,20 @@
 /** @class QRCodeView displays a QRCode for the encodedString provided */
 #if TARGET_OS_IPHONE
 @interface QRCodeView : UIView
+{
+    UIImage* cachedCodeImage;
+    NSString* cachedCodeString;
+}
+@property(nonatomic,readonly) UIImage* codeImage;
 #else
 @interface QRCodeView : NSView
+{
+    NSImage* cachedCodeImage;
+    NSString* cachedCodeString;
+}
+@property(nonatomic,readonly) NSImage* codeImage;
 #endif
 
-@property(nonatomic,retain) NSString* encodedString;
+@property(nonatomic,retain) NSString* codeString;
 
 @end

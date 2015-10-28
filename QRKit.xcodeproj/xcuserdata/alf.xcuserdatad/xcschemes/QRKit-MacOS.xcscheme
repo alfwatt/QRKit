@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "758A25121BE0914400E3576A"
-               BuildableName = "QRKit-MacOS.framework"
+               BuildableName = "QRKit.framework"
                BlueprintName = "QRKit-MacOS"
                ReferencedContainer = "container:QRKit.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "758A25121BE0914400E3576A"
-            BuildableName = "QRKit-MacOS.framework"
+            BuildableName = "QRKit.framework"
             BlueprintName = "QRKit-MacOS"
             ReferencedContainer = "container:QRKit.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "758A25121BE0914400E3576A"
-            BuildableName = "QRKit-MacOS.framework"
+            BuildableName = "QRKit.framework"
             BlueprintName = "QRKit-MacOS"
             ReferencedContainer = "container:QRKit.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "758A25121BE0914400E3576A"
-            BuildableName = "QRKit-MacOS.framework"
+            BuildableName = "QRKit.framework"
             BlueprintName = "QRKit-MacOS"
             ReferencedContainer = "container:QRKit.xcodeproj">
          </BuildableReference>

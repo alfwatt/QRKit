@@ -12,14 +12,14 @@
 
 #if TARGET_OS_IPHONE
 
-- (UIImage*) QRCodeFromString:(NSString*) string withSize:(CGSize) size;
++ (UIImage*) QRCodeFromString:(NSString*) string withSize:(CGSize) size;
 
 #else
 
-- (NSImage*) QRCodeFromString:(NSString*) string withSize:(CGSize) size;
++ (NSImage*) QRCodeFromString:(NSString*) string withSize:(CGSize) size;
 
 #endif
 
-- (CIImage*) QRCodeImageFromString:(NSString*) string;
++ (CIImage*) QRCodeImageFromString:(NSString*) string;
 
 @end
