@@ -1,4 +1,5 @@
 #import "QRCodeView.h"
+#import "QRCoder.h"
 
 @implementation QRCodeView
 

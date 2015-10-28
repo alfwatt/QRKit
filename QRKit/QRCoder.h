@@ -1,4 +1,5 @@
 #include "TargetConditionals.h"
+#import <CoreImage/CoreImage.h>
 #import <Foundation/Foundation.h>
 
 #if TARGET_OS_IPHONE
@@ -11,17 +12,14 @@
 
 #if TARGET_OS_IPHONE
 
-- (NSString*) stringFromQRCode:(UIImage*) image;
-- (UIImage*) QRCodeFromString:(NSString*) url;
+- (UIImage*) QRCodeFromString:(NSString*) string withSize:(CGSize) size;
 
 #else
 
-- (NSString*) stringFromQRCode:(NSImage*) image;
-- (NSImage*) QRCodeFromString:(NSString*) url;
+- (NSImage*) QRCodeFromString:(NSString*) string withSize:(CGSize) size;
 
 #endif
 
-- (NSString*) srringFromImageRef:(CGImageRef) image;
-- (CGImageRef) imageRefFromString:(NSString*) string;
+- (CIImage*) QRCodeImageFromString:(NSString*) string;
 
 @end

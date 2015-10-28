@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		7510745019D0ACFC00C85851 /* QRKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510744F19D0ACFC00C85851 /* QRKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7510746519D0AE5500C85851 /* QRCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510746319D0AE5500C85851 /* QRCoder.h */; };
+		7510746519D0AE5500C85851 /* QRCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510746319D0AE5500C85851 /* QRCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7510746619D0AE5500C85851 /* QRCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7510746419D0AE5500C85851 /* QRCoder.m */; };
-		7510746919D0AE8100C85851 /* QRCodeScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510746719D0AE8100C85851 /* QRCodeScanner.h */; };
+		7510746919D0AE8100C85851 /* QRCodeScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510746719D0AE8100C85851 /* QRCodeScanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7510746A19D0AE8100C85851 /* QRCodeScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 7510746819D0AE8100C85851 /* QRCodeScanner.m */; };
-		7510746F19D0C6B200C85851 /* QRCodeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510746D19D0C6B200C85851 /* QRCodeView.h */; };
+		7510746F19D0C6B200C85851 /* QRCodeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510746D19D0C6B200C85851 /* QRCodeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7510747019D0C6B200C85851 /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7510746E19D0C6B200C85851 /* QRCodeView.m */; };
+		758A252A1BE0962000E3576A /* QRCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7510746419D0AE5500C85851 /* QRCoder.m */; };
+		758A252B1BE0962400E3576A /* QRCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510746319D0AE5500C85851 /* QRCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		758A252C1BE0962800E3576A /* QRKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510744F19D0ACFC00C85851 /* QRKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		758A252D1BE0962E00E3576A /* QRCodeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510746D19D0C6B200C85851 /* QRCodeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		758A252E1BE0963100E3576A /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7510746E19D0C6B200C85851 /* QRCodeView.m */; };
+		758A252F1BE0963500E3576A /* QRCodeScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510746719D0AE8100C85851 /* QRCodeScanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +32,19 @@
 		7510746819D0AE8100C85851 /* QRCodeScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeScanner.m; sourceTree = "<group>"; };
 		7510746D19D0C6B200C85851 /* QRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeView.h; sourceTree = "<group>"; };
 		7510746E19D0C6B200C85851 /* QRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeView.m; sourceTree = "<group>"; };
+		758A25131BE0914400E3576A /* QRKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		758A25171BE0914400E3576A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		7510744619D0ACFC00C85851 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		758A250F1BE0914400E3576A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				7510744C19D0ACFC00C85851 /* QRKit */,
+				7510744D19D0ACFC00C85851 /* QRKit-iOS */,
+				758A25141BE0914400E3576A /* QRKit-MacOS */,
 				7510744B19D0ACFC00C85851 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				7510744A19D0ACFC00C85851 /* QRKit.framework */,
+				758A25131BE0914400E3576A /* QRKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				7510744F19D0ACFC00C85851 /* QRKit.h */,
-				7510744D19D0ACFC00C85851 /* Supporting Files */,
 				7510746319D0AE5500C85851 /* QRCoder.h */,
 				7510746419D0AE5500C85851 /* QRCoder.m */,
 				7510746D19D0C6B200C85851 /* QRCodeView.h */,
@@ -70,12 +87,20 @@
 			path = QRKit;
 			sourceTree = "<group>";
 		};
-		7510744D19D0ACFC00C85851 /* Supporting Files */ = {
+		7510744D19D0ACFC00C85851 /* QRKit-iOS */ = {
 			isa = PBXGroup;
 			children = (
 				7510744E19D0ACFC00C85851 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "QRKit-iOS";
+			sourceTree = "<group>";
+		};
+		758A25141BE0914400E3576A /* QRKit-MacOS */ = {
+			isa = PBXGroup;
+			children = (
+				758A25171BE0914400E3576A /* Info.plist */,
+			);
+			path = "QRKit-MacOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,12 +117,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		758A25101BE0914400E3576A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				758A252C1BE0962800E3576A /* QRKit.h in Headers */,
+				758A252F1BE0963500E3576A /* QRCodeScanner.h in Headers */,
+				758A252D1BE0962E00E3576A /* QRCodeView.h in Headers */,
+				758A252B1BE0962400E3576A /* QRCoder.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7510744919D0ACFC00C85851 /* QRKit */ = {
+		7510744919D0ACFC00C85851 /* QRKit-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7510745D19D0ACFC00C85851 /* Build configuration list for PBXNativeTarget "QRKit" */;
+			buildConfigurationList = 7510745D19D0ACFC00C85851 /* Build configuration list for PBXNativeTarget "QRKit-iOS" */;
 			buildPhases = (
 				7510744519D0ACFC00C85851 /* Sources */,
 				7510744619D0ACFC00C85851 /* Frameworks */,
@@ -108,9 +144,27 @@
 			);
 			dependencies = (
 			);
-			name = QRKit;
+			name = "QRKit-iOS";
 			productName = QRKit;
 			productReference = 7510744A19D0ACFC00C85851 /* QRKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		758A25121BE0914400E3576A /* QRKit-MacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 758A25281BE0914500E3576A /* Build configuration list for PBXNativeTarget "QRKit-MacOS" */;
+			buildPhases = (
+				758A250E1BE0914400E3576A /* Sources */,
+				758A250F1BE0914400E3576A /* Frameworks */,
+				758A25101BE0914400E3576A /* Headers */,
+				758A25111BE0914400E3576A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "QRKit-MacOS";
+			productName = "QRKit-MacOS";
+			productReference = 758A25131BE0914400E3576A /* QRKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -124,6 +178,9 @@
 				TargetAttributes = {
 					7510744919D0ACFC00C85851 = {
 						CreatedOnToolsVersion = 6.0.1;
+					};
+					758A25121BE0914400E3576A = {
+						CreatedOnToolsVersion = 7.1;
 					};
 				};
 			};
@@ -139,13 +196,21 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7510744919D0ACFC00C85851 /* QRKit */,
+				7510744919D0ACFC00C85851 /* QRKit-iOS */,
+				758A25121BE0914400E3576A /* QRKit-MacOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7510744819D0ACFC00C85851 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		758A25111BE0914400E3576A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -162,6 +227,15 @@
 				7510746A19D0AE8100C85851 /* QRCodeScanner.m in Sources */,
 				7510746619D0AE5500C85851 /* QRCoder.m in Sources */,
 				7510747019D0C6B200C85851 /* QRCodeView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		758A250E1BE0914400E3576A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				758A252E1BE0963100E3576A /* QRCodeView.m in Sources */,
+				758A252A1BE0962000E3576A /* QRCoder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +278,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -243,6 +318,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -259,10 +335,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = QRKit/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/QRKit-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = net.istumbler.labs.QRKit;
+				PRODUCT_NAME = QRKit;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -274,10 +351,59 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = QRKit/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/QRKit-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = net.istumbler.labs.QRKit;
+				PRODUCT_NAME = QRKit;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		758A25241BE0914500E3576A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "QRKit-MacOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = net.istumbler.labs.QRKit;
+				PRODUCT_NAME = QRKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		758A25251BE0914500E3576A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "QRKit-MacOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = net.istumbler.labs.QRKit;
+				PRODUCT_NAME = QRKit;
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -294,7 +420,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7510745D19D0ACFC00C85851 /* Build configuration list for PBXNativeTarget "QRKit" */ = {
+		7510745D19D0ACFC00C85851 /* Build configuration list for PBXNativeTarget "QRKit-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7510745E19D0ACFC00C85851 /* Debug */,
@@ -302,6 +428,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		758A25281BE0914500E3576A /* Build configuration list for PBXNativeTarget "QRKit-MacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				758A25241BE0914500E3576A /* Debug */,
+				758A25251BE0914500E3576A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

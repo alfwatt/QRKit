@@ -4,15 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>QRKit.xcscheme</key>
+		<key>QRKit-MacOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>QRKit-iOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
-		</dict>
-		<key>QRKitTests.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -23,6 +23,16 @@
 			<true/>
 		</dict>
 		<key>7510745419D0ACFC00C85851</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>758A25121BE0914400E3576A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>758A251B1BE0914500E3576A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
