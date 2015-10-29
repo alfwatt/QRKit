@@ -12,11 +12,7 @@
     return CGRectMake(xOffset,yOffset,squareSide,squareSide);
 }
 
-#if TARGET_OS_IPHONE
-- (UIImage*) codeImage
-#else
-- (NSImage*) codeImage
-#endif
+- (QRImage*) codeImage
 {
     if( !cachedCodeImage) {
         cachedCodeImage = [QRCoder QRCodeFromString:self.codeString withSize:[self insetSquare].size];

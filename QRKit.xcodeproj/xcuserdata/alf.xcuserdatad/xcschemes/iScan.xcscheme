@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "758A25341BE177E300E3576A"
                BuildableName = "iScan.app"
-               BlueprintName = "iScan"
+               BlueprintName = "iScan-MacOS"
                ReferencedContainer = "container:QRKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,7 +34,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "758A25341BE177E300E3576A"
             BuildableName = "iScan.app"
-            BlueprintName = "iScan"
+            BlueprintName = "iScan-MacOS"
             ReferencedContainer = "container:QRKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -57,7 +57,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "758A25341BE177E300E3576A"
             BuildableName = "iScan.app"
-            BlueprintName = "iScan"
+            BlueprintName = "iScan-MacOS"
             ReferencedContainer = "container:QRKit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -76,7 +76,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "758A25341BE177E300E3576A"
             BuildableName = "iScan.app"
-            BlueprintName = "iScan"
+            BlueprintName = "iScan-MacOS"
             ReferencedContainer = "container:QRKit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

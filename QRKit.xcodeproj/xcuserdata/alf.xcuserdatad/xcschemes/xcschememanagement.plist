@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>iScan-iOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>iScan.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -43,6 +48,11 @@
 			<true/>
 		</dict>
 		<key>758A25341BE177E300E3576A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>758A25521BE1CBDD00E3576A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,25 +1,14 @@
-#include "TargetConditionals.h"
 #import <CoreImage/CoreImage.h>
 #import <Foundation/Foundation.h>
 
-#if TARGET_OS_IPHONE
-#import <UIKit/UIKit.h>
-#else
-#import <AppKit/AppKit.h>
-#endif
+#import <QRKit/QRDefines.h>
 
 @interface QRCoder : NSObject
 
-#if TARGET_OS_IPHONE
+/** @return a QRImage (NSImage or UIImage) with a QRCode for the string provided at the size requested */
++ (QRImage*) QRCodeFromString:(NSString*) string withSize:(CGSize) size;
 
-+ (UIImage*) QRCodeFromString:(NSString*) string withSize:(CGSize) size;
-
-#else
-
-+ (NSImage*) QRCodeFromString:(NSString*) string withSize:(CGSize) size;
-
-#endif
-
-+ (CIImage*) QRCodeImageFromString:(NSString*) string;
+/** @return a CIImage with a QRCode for the string provided at the size requested */
++ (CIImage*) QRCodeImageFromString:(NSString*) string withSize:(CGSize) size;
 
 @end
