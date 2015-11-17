@@ -6,14 +6,29 @@
 
 @implementation CodeViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction) enterCodeString:(id)sender
+{
+    [self.textView resignFirstResponder];
+    self.codeView.codeString = self.textView.text;
+}
+
+#pragma mark - UITextViewDelegate
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void) textViewDidEndEditing:(UITextView*) sender
+{
+    self.codeView.codeString = self.textView.text;
 }
 
 @end

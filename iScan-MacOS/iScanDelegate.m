@@ -6,24 +6,12 @@
 
 @implementation iScanDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+- (void)applicationDidFinishLaunching:(NSNotification*) note
 {
 }
 
-- (void)applicationWillTerminate:(NSNotification *)aNotification
+- (void)applicationWillTerminate:(NSNotification*) note
 {
-}
-
-#pragma mark - IBActions
-
-- (IBAction)onNewCodeWindow:(id)sender
-{
-    // TODO create a new window and select the code toolbar item
-}
-
-- (IBAction)onNewScanWindow:(id)sender
-{
-    // TODO create a new window and select the scan toolbar item
 }
 
 @end

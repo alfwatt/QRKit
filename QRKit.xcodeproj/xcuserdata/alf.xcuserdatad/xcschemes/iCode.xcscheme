@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "758A25521BE1CBDD00E3576A"
-               BuildableName = "iScan-iOS.app"
-               BlueprintName = "iScan-iOS"
+               BlueprintIdentifier = "758A25341BE177E300E3576A"
+               BuildableName = "iCode.app"
+               BlueprintName = "iCode"
                ReferencedContainer = "container:QRKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "758A25521BE1CBDD00E3576A"
-            BuildableName = "iScan-iOS.app"
-            BlueprintName = "iScan-iOS"
+            BlueprintIdentifier = "758A25341BE177E300E3576A"
+            BuildableName = "iCode.app"
+            BlueprintName = "iCode"
             ReferencedContainer = "container:QRKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -55,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "758A25521BE1CBDD00E3576A"
-            BuildableName = "iScan-iOS.app"
-            BlueprintName = "iScan-iOS"
+            BlueprintIdentifier = "758A25341BE177E300E3576A"
+            BuildableName = "iCode.app"
+            BlueprintName = "iCode"
             ReferencedContainer = "container:QRKit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -74,9 +74,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "758A25521BE1CBDD00E3576A"
-            BuildableName = "iScan-iOS.app"
-            BlueprintName = "iScan-iOS"
+            BlueprintIdentifier = "758A25341BE177E300E3576A"
+            BuildableName = "iCode.app"
+            BlueprintName = "iCode"
             ReferencedContainer = "container:QRKit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

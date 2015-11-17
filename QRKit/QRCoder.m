@@ -11,8 +11,8 @@
 
 + (UIImage*) QRCodeFromString:(NSString*) string withSize:(CGSize) size
 {
-    CIImage* qrCode = [self QRCodeImageFromString:string];
-    return [UIImage imageWithCIImage:qrCode withSize:size];
+    CIImage* qrCode = [self QRCodeImageFromString:string withSize:size];
+    return [UIImage imageWithCIImage:qrCode];
 }
 
 #else

@@ -9,7 +9,9 @@
     CGFloat squareSide = floor(fmin(viewSize.width,viewSize.height));
     CGFloat xOffset = floor((viewSize.width - squareSide) / 2);
     CGFloat yOffset = floor((viewSize.height - squareSide) / 2);
-    return CGRectMake(xOffset,yOffset,squareSide,squareSide);
+    CGRect insetSquare = CGRectMake(xOffset,yOffset,squareSide,squareSide);
+//  NSLog(@"QRCodeView insetSquare: %@", NSStringFromCGRect(insetSquare));
+    return insetSquare;
 }
 
 - (QRImage*) codeImage
@@ -29,7 +31,11 @@
 {
     cachedCodeString = encodedString;
     cachedCodeImage = nil;
+#ifdef TARGET_OS_IPHONE
+    [self setNeedsDisplay];
+#else
     [self setNeedsDisplay:YES];
+#endif
 }
 
 #pragma mark - Shared NSView & UIView Methods
@@ -42,7 +48,12 @@
 #if TARGET_OS_IPHONE
 #pragma mark - UIView Methods
 
-// TODO UIView resizing methods
+- (void) layoutSubviews
+{
+    cachedCodeImage = nil;
+    [self setNeedsDisplay];
+    [super layoutSubviews];
+}
 
 #else
 #pragma mark - NSView Methods
@@ -50,7 +61,11 @@
 - (void)setFrameSize:(NSSize)newSize
 {
     cachedCodeImage = nil; // invalidate the image cache when resizing
+#ifdef TARGET_OS_IPHONE
+    [self setNeedsDisplay];
+#else
     [self setNeedsDisplay:YES];
+#endif
     [super setFrameSize:newSize];
 }
 #endif

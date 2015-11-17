@@ -16,15 +16,15 @@
 		7510747019D0C6B200C85851 /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7510746E19D0C6B200C85851 /* QRCodeView.m */; };
 		755ECCC61BE2A9D700638366 /* QRDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 755ECCC51BE2A9D700638366 /* QRDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		755ECCC71BE2A9D700638366 /* QRDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 755ECCC51BE2A9D700638366 /* QRDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		755ECCCC1BE2DC8900638366 /* QRKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7510744A19D0ACFC00C85851 /* QRKit.framework */; };
 		758A252A1BE0962000E3576A /* QRCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7510746419D0AE5500C85851 /* QRCoder.m */; };
 		758A252B1BE0962400E3576A /* QRCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510746319D0AE5500C85851 /* QRCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		758A252C1BE0962800E3576A /* QRKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510744F19D0ACFC00C85851 /* QRKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		758A252D1BE0962E00E3576A /* QRCodeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510746D19D0C6B200C85851 /* QRCodeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		758A252E1BE0963100E3576A /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7510746E19D0C6B200C85851 /* QRCodeView.m */; };
-		758A252F1BE0963500E3576A /* QRCodeScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510746719D0AE8100C85851 /* QRCodeScanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		758A25391BE177E300E3576A /* iScanDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 758A25381BE177E300E3576A /* iScanDelegate.m */; };
 		758A253C1BE177E300E3576A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 758A253B1BE177E300E3576A /* main.m */; };
-		758A253F1BE177E300E3576A /* iScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758A253E1BE177E300E3576A /* iScanController.m */; };
+		758A253F1BE177E300E3576A /* iScanCodingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758A253E1BE177E300E3576A /* iScanCodingController.m */; };
 		758A25411BE177E300E3576A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 758A25401BE177E300E3576A /* Assets.xcassets */; };
 		758A25441BE177E300E3576A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758A25421BE177E300E3576A /* Main.storyboard */; };
 		758A25491BE1781900E3576A /* QRKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758A25131BE0914400E3576A /* QRKit.framework */; };
@@ -39,6 +39,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		755ECCCD1BE2DCB500638366 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7510744119D0ACFB00C85851 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7510744919D0ACFC00C85851;
+			remoteInfo = "QRKit-iOS";
+		};
 		758A254A1BE1782400E3576A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7510744119D0ACFB00C85851 /* Project object */;
@@ -61,17 +68,17 @@
 		755ECCC51BE2A9D700638366 /* QRDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRDefines.h; sourceTree = "<group>"; };
 		758A25131BE0914400E3576A /* QRKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		758A25171BE0914400E3576A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		758A25351BE177E300E3576A /* iScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		758A25351BE177E300E3576A /* iCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		758A25371BE177E300E3576A /* iScanDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iScanDelegate.h; sourceTree = "<group>"; };
 		758A25381BE177E300E3576A /* iScanDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iScanDelegate.m; sourceTree = "<group>"; };
 		758A253B1BE177E300E3576A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		758A253D1BE177E300E3576A /* iScanController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iScanController.h; sourceTree = "<group>"; };
-		758A253E1BE177E300E3576A /* iScanController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iScanController.m; sourceTree = "<group>"; };
+		758A253D1BE177E300E3576A /* iScanCodingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iScanCodingController.h; sourceTree = "<group>"; };
+		758A253E1BE177E300E3576A /* iScanCodingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iScanCodingController.m; sourceTree = "<group>"; };
 		758A25401BE177E300E3576A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		758A25431BE177E300E3576A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		758A25451BE177E300E3576A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		758A254C1BE1783900E3576A /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
-		758A25531BE1CBDD00E3576A /* iScan-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iScan-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		758A25531BE1CBDD00E3576A /* iScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		758A25561BE1CBDE00E3576A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		758A25581BE1CBDE00E3576A /* iScanDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iScanDelegate.h; sourceTree = "<group>"; };
 		758A25591BE1CBDE00E3576A /* iScanDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iScanDelegate.m; sourceTree = "<group>"; };
@@ -114,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				755ECCCC1BE2DC8900638366 /* QRKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,8 +135,8 @@
 				7510744C19D0ACFC00C85851 /* QRKit */,
 				7510744D19D0ACFC00C85851 /* QRKit-iOS */,
 				758A25141BE0914400E3576A /* QRKit-MacOS */,
-				758A25361BE177E300E3576A /* iScan-MacOS */,
 				758A25541BE1CBDE00E3576A /* iScan-iOS */,
+				758A25361BE177E300E3576A /* iScan-MacOS */,
 				758A254E1BE1CB7F00E3576A /* Frameworks */,
 				7510744B19D0ACFC00C85851 /* Products */,
 			);
@@ -139,8 +147,8 @@
 			children = (
 				7510744A19D0ACFC00C85851 /* QRKit.framework */,
 				758A25131BE0914400E3576A /* QRKit.framework */,
-				758A25351BE177E300E3576A /* iScan.app */,
-				758A25531BE1CBDD00E3576A /* iScan-iOS.app */,
+				758A25351BE177E300E3576A /* iCode.app */,
+				758A25531BE1CBDD00E3576A /* iScan.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,8 +189,8 @@
 			children = (
 				758A25371BE177E300E3576A /* iScanDelegate.h */,
 				758A25381BE177E300E3576A /* iScanDelegate.m */,
-				758A253D1BE177E300E3576A /* iScanController.h */,
-				758A253E1BE177E300E3576A /* iScanController.m */,
+				758A253D1BE177E300E3576A /* iScanCodingController.h */,
+				758A253E1BE177E300E3576A /* iScanCodingController.m */,
 				758A25401BE177E300E3576A /* Assets.xcassets */,
 				758A25421BE177E300E3576A /* Main.storyboard */,
 				758A25451BE177E300E3576A /* Info.plist */,
@@ -253,7 +261,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				758A252C1BE0962800E3576A /* QRKit.h in Headers */,
-				758A252F1BE0963500E3576A /* QRCodeScanner.h in Headers */,
 				758A252D1BE0962E00E3576A /* QRCodeView.h in Headers */,
 				755ECCC71BE2A9D700638366 /* QRDefines.h in Headers */,
 				758A252B1BE0962400E3576A /* QRCoder.h in Headers */,
@@ -299,9 +306,9 @@
 			productReference = 758A25131BE0914400E3576A /* QRKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		758A25341BE177E300E3576A /* iScan-MacOS */ = {
+		758A25341BE177E300E3576A /* iCode */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 758A25461BE177E300E3576A /* Build configuration list for PBXNativeTarget "iScan-MacOS" */;
+			buildConfigurationList = 758A25461BE177E300E3576A /* Build configuration list for PBXNativeTarget "iCode" */;
 			buildPhases = (
 				758A25311BE177E300E3576A /* Sources */,
 				758A25321BE177E300E3576A /* Frameworks */,
@@ -312,14 +319,14 @@
 			dependencies = (
 				758A254B1BE1782400E3576A /* PBXTargetDependency */,
 			);
-			name = "iScan-MacOS";
+			name = iCode;
 			productName = iScan;
-			productReference = 758A25351BE177E300E3576A /* iScan.app */;
+			productReference = 758A25351BE177E300E3576A /* iCode.app */;
 			productType = "com.apple.product-type.application";
 		};
-		758A25521BE1CBDD00E3576A /* iScan-iOS */ = {
+		758A25521BE1CBDD00E3576A /* iScan */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 758A256A1BE1CBDE00E3576A /* Build configuration list for PBXNativeTarget "iScan-iOS" */;
+			buildConfigurationList = 758A256A1BE1CBDE00E3576A /* Build configuration list for PBXNativeTarget "iScan" */;
 			buildPhases = (
 				758A254F1BE1CBDD00E3576A /* Sources */,
 				758A25501BE1CBDD00E3576A /* Frameworks */,
@@ -328,10 +335,11 @@
 			buildRules = (
 			);
 			dependencies = (
+				755ECCCE1BE2DCB500638366 /* PBXTargetDependency */,
 			);
-			name = "iScan-iOS";
+			name = iScan;
 			productName = "iScan-iOS";
-			productReference = 758A25531BE1CBDD00E3576A /* iScan-iOS.app */;
+			productReference = 758A25531BE1CBDD00E3576A /* iScan.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -372,8 +380,8 @@
 			targets = (
 				7510744919D0ACFC00C85851 /* QRKit-iOS */,
 				758A25121BE0914400E3576A /* QRKit-MacOS */,
-				758A25521BE1CBDD00E3576A /* iScan-iOS */,
-				758A25341BE177E300E3576A /* iScan-MacOS */,
+				758A25521BE1CBDD00E3576A /* iScan */,
+				758A25341BE177E300E3576A /* iCode */,
 			);
 		};
 /* End PBXProject section */
@@ -438,7 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				758A253F1BE177E300E3576A /* iScanController.m in Sources */,
+				758A253F1BE177E300E3576A /* iScanCodingController.m in Sources */,
 				758A253C1BE177E300E3576A /* main.m in Sources */,
 				758A25391BE177E300E3576A /* iScanDelegate.m in Sources */,
 			);
@@ -458,6 +466,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		755ECCCE1BE2DCB500638366 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7510744919D0ACFC00C85851 /* QRKit-iOS */;
+			targetProxy = 755ECCCD1BE2DCB500638366 /* PBXContainerItemProxy */;
+		};
 		758A254B1BE1782400E3576A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 758A25121BE0914400E3576A /* QRKit-MacOS */;
@@ -671,9 +684,9 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/iScan-MacOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = net.istumbler.labs.iScan;
-				PRODUCT_NAME = iScan;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = net.istumbler.labs.iCode;
+				PRODUCT_NAME = iCode;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -689,9 +702,9 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/iScan-MacOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = net.istumbler.labs.iScan;
-				PRODUCT_NAME = iScan;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = net.istumbler.labs.iCode;
+				PRODUCT_NAME = iCode;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -756,7 +769,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		758A25461BE177E300E3576A /* Build configuration list for PBXNativeTarget "iScan-MacOS" */ = {
+		758A25461BE177E300E3576A /* Build configuration list for PBXNativeTarget "iCode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				758A25471BE177E300E3576A /* Debug */,
@@ -765,7 +778,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		758A256A1BE1CBDE00E3576A /* Build configuration list for PBXNativeTarget "iScan-iOS" */ = {
+		758A256A1BE1CBDE00E3576A /* Build configuration list for PBXNativeTarget "iScan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				758A256B1BE1CBDE00E3576A /* Debug */,

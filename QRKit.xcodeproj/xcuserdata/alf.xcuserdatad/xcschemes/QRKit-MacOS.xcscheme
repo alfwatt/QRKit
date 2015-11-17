@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "758A251B1BE0914500E3576A"
-               BuildableName = "QRKit-MacOSTests.xctest"
-               BlueprintName = "QRKit-MacOSTests"
-               ReferencedContainer = "container:QRKit.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "758A25121BE0914400E3576A"
-            BuildableName = "QRKit.framework"
-            BlueprintName = "QRKit-MacOS"
-            ReferencedContainer = "container:QRKit.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>

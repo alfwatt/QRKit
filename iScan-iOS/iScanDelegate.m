@@ -1,4 +1,4 @@
-#import "AppDelegate.h"
+#import "iScanDelegate.h"
 
 @interface iScanDelegate ()
 

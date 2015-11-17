@@ -1,4 +1,3 @@
-
 #import <QRKit/QRDefines.h>
 
 /** @class QRCodeView displays a QRCode for the encodedString provided */
