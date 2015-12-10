@@ -1,4 +1,4 @@
-#include "TargetConditionals.h"
+#include <TargetConditionals.h>
 
 /** Defines for QRKit briding the iOS/MacOS classes */
 

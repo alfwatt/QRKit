@@ -31,7 +31,7 @@
 {
     cachedCodeString = encodedString;
     cachedCodeImage = nil;
-#ifdef TARGET_OS_IPHONE
+#if TARGET_OS_IPHONE
     [self setNeedsDisplay];
 #else
     [self setNeedsDisplay:YES];
@@ -61,11 +61,7 @@
 - (void)setFrameSize:(NSSize)newSize
 {
     cachedCodeImage = nil; // invalidate the image cache when resizing
-#ifdef TARGET_OS_IPHONE
-    [self setNeedsDisplay];
-#else
     [self setNeedsDisplay:YES];
-#endif
     [super setFrameSize:newSize];
 }
 #endif
