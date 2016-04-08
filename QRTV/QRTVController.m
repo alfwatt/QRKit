@@ -1,9 +1,5 @@
 #import "QRTVController.h"
 
-@interface QRTVController ()
-
-@end
-
 @implementation QRTVController
 
 - (IBAction) updateQRCode:(id)sender

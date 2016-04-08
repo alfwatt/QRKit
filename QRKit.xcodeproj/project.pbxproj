@@ -37,6 +37,9 @@
 		758A25631BE1CBDE00E3576A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758A25611BE1CBDE00E3576A /* Main.storyboard */; };
 		758A25651BE1CBDE00E3576A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 758A25641BE1CBDE00E3576A /* Assets.xcassets */; };
 		758A25681BE1CBDE00E3576A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758A25661BE1CBDE00E3576A /* LaunchScreen.storyboard */; };
+		75B93E041CB815EA007BC512 /* QRTV-Icon-Back.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B93E011CB815EA007BC512 /* QRTV-Icon-Back.png */; };
+		75B93E051CB815EA007BC512 /* QRTV-Icon-Middle.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B93E021CB815EA007BC512 /* QRTV-Icon-Middle.png */; };
+		75B93E061CB815EA007BC512 /* QRTV-Icon-Front.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B93E031CB815EA007BC512 /* QRTV-Icon-Front.png */; };
 		75DD057C1CB771E50090C6C1 /* QRCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7510746419D0AE5500C85851 /* QRCoder.m */; };
 		75DD057D1CB771E50090C6C1 /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7510746E19D0C6B200C85851 /* QRCodeView.m */; };
 		75DD05801CB771E50090C6C1 /* QRKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510744F19D0ACFC00C85851 /* QRKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -161,6 +164,9 @@
 		758A25671BE1CBDE00E3576A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		758A25691BE1CBDE00E3576A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		758A256D1BE1CD2100E3576A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		75B93E011CB815EA007BC512 /* QRTV-Icon-Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QRTV-Icon-Back.png"; sourceTree = "<group>"; };
+		75B93E021CB815EA007BC512 /* QRTV-Icon-Middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QRTV-Icon-Middle.png"; sourceTree = "<group>"; };
+		75B93E031CB815EA007BC512 /* QRTV-Icon-Front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QRTV-Icon-Front.png"; sourceTree = "<group>"; };
 		75DD05891CB771E50090C6C1 /* QRKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75DD059E1CB7778E0090C6C1 /* QRKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75DD05AC1CB778B00090C6C1 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
@@ -332,6 +338,9 @@
 		75DD05B41CB7FF4F0090C6C1 /* Artwork */ = {
 			isa = PBXGroup;
 			children = (
+				75B93E031CB815EA007BC512 /* QRTV-Icon-Front.png */,
+				75B93E021CB815EA007BC512 /* QRTV-Icon-Middle.png */,
+				75B93E011CB815EA007BC512 /* QRTV-Icon-Back.png */,
 				75DD05BA1CB7FF810090C6C1 /* reticle-Template.pdf */,
 			);
 			path = Artwork;
@@ -591,7 +600,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75B93E041CB815EA007BC512 /* QRTV-Icon-Back.png in Resources */,
+				75B93E051CB815EA007BC512 /* QRTV-Icon-Middle.png in Resources */,
 				75DD05BC1CB7FF810090C6C1 /* reticle-Template.pdf in Resources */,
+				75B93E061CB815EA007BC512 /* QRTV-Icon-Front.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
