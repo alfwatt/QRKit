@@ -1,6 +1,6 @@
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface QRTVDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

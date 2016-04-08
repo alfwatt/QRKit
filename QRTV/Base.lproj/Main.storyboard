@@ -4,19 +4,36 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="QRTVController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="QRCodeView">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vb8-c9-gsR" customClass="QRCodeView">
+                                <rect key="frame" x="448" y="28" width="1024" height="1024"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1024" id="4hl-g7-gGV"/>
+                                    <constraint firstAttribute="width" constant="1024" id="aZT-vL-iLE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vb8-c9-gsR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EQP-LA-hKC"/>
+                            <constraint firstItem="Vb8-c9-gsR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="y7l-5p-F1r"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="codeView" destination="Vb8-c9-gsR" id="k0q-aI-MlK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

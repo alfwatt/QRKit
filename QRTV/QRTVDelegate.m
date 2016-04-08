@@ -1,10 +1,10 @@
-#import "AppDelegate.h"
+#import "QRTVDelegate.h"
 
-@interface AppDelegate ()
+@interface QRTVDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation QRTVDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
