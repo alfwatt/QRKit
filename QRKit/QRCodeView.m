@@ -3,6 +3,7 @@
 
 @implementation QRCodeView
 
+#if !TARGET_OS_WATCH
 - (CGRect) insetSquare
 {
     CGSize viewSize = [self frame].size;
@@ -64,6 +65,8 @@
     [self setNeedsDisplay:YES];
     [super setFrameSize:newSize];
 }
+#endif
+
 #endif
 
 @end

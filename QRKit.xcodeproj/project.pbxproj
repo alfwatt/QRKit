@@ -46,6 +46,17 @@
 		75DD05931CB774560090C6C1 /* QRKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 7510744A19D0ACFC00C85851 /* QRKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		75DD05961CB774800090C6C1 /* QRKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 758A25131BE0914400E3576A /* QRKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		75DD05981CB7749C0090C6C1 /* QRKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 75DD05891CB771E50090C6C1 /* QRKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		75DD05A61CB778640090C6C1 /* QRCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7510746419D0AE5500C85851 /* QRCoder.m */; };
+		75DD05A71CB778640090C6C1 /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7510746E19D0C6B200C85851 /* QRCodeView.m */; };
+		75DD05A81CB7787F0090C6C1 /* QRKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510744F19D0ACFC00C85851 /* QRKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75DD05A91CB7787F0090C6C1 /* QRDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 755ECCC51BE2A9D700638366 /* QRDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75DD05AA1CB7787F0090C6C1 /* QRCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510746319D0AE5500C85851 /* QRCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75DD05AB1CB7787F0090C6C1 /* QRCodeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510746D19D0C6B200C85851 /* QRCodeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75DD05AD1CB778B00090C6C1 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DD05AC1CB778B00090C6C1 /* CoreImage.framework */; };
+		75DD05AF1CB778BB0090C6C1 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DD05AE1CB778BB0090C6C1 /* CoreImage.framework */; };
+		75DD05B11CB77A040090C6C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DD05B01CB77A040090C6C1 /* CoreGraphics.framework */; };
+		75DD05B31CB77A620090C6C1 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DD05B21CB77A620090C6C1 /* ImageIO.framework */; };
+		75DD05BC1CB7FF810090C6C1 /* reticle-Template.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 75DD05BA1CB7FF810090C6C1 /* reticle-Template.pdf */; };
 		75E009851CB769D600139F8C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E009841CB769D600139F8C /* main.m */; };
 		75E009881CB769D600139F8C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E009871CB769D600139F8C /* AppDelegate.m */; };
 		75E0098B1CB769D600139F8C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0098A1CB769D600139F8C /* ViewController.m */; };
@@ -115,7 +126,7 @@
 
 /* Begin PBXFileReference section */
 		7510744A19D0ACFC00C85851 /* QRKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7510744E19D0ACFC00C85851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7510744E19D0ACFC00C85851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = QRKit/Info.plist; sourceTree = SOURCE_ROOT; };
 		7510744F19D0ACFC00C85851 /* QRKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRKit.h; sourceTree = "<group>"; };
 		7510746319D0AE5500C85851 /* QRCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCoder.h; sourceTree = "<group>"; };
 		7510746419D0AE5500C85851 /* QRCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCoder.m; sourceTree = "<group>"; };
@@ -125,7 +136,6 @@
 		7510746E19D0C6B200C85851 /* QRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeView.m; sourceTree = "<group>"; };
 		755ECCC51BE2A9D700638366 /* QRDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRDefines.h; sourceTree = "<group>"; };
 		758A25131BE0914400E3576A /* QRKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		758A25171BE0914400E3576A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		758A25351BE177E300E3576A /* iCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		758A25371BE177E300E3576A /* iCodeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iCodeDelegate.h; sourceTree = "<group>"; };
 		758A25381BE177E300E3576A /* iCodeDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iCodeDelegate.m; sourceTree = "<group>"; };
@@ -150,6 +160,12 @@
 		758A25691BE1CBDE00E3576A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		758A256D1BE1CD2100E3576A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		75DD05891CB771E50090C6C1 /* QRKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75DD059E1CB7778E0090C6C1 /* QRKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75DD05AC1CB778B00090C6C1 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
+		75DD05AE1CB778BB0090C6C1 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.2.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
+		75DD05B01CB77A040090C6C1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.2.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		75DD05B21CB77A620090C6C1 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.2.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		75DD05BA1CB7FF810090C6C1 /* reticle-Template.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "reticle-Template.pdf"; sourceTree = "<group>"; };
 		75E009811CB769D600139F8C /* QRTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E009841CB769D600139F8C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75E009861CB769D600139F8C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -166,6 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75DD05AD1CB778B00090C6C1 /* CoreImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +214,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75DD05AF1CB778BB0090C6C1 /* CoreImage.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75DD059A1CB7778E0090C6C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75DD05B31CB77A620090C6C1 /* ImageIO.framework in Frameworks */,
+				75DD05B11CB77A040090C6C1 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,11 +243,10 @@
 			children = (
 				758A256D1BE1CD2100E3576A /* README.md */,
 				7510744C19D0ACFC00C85851 /* QRKit */,
-				7510744D19D0ACFC00C85851 /* QRKit-UIKit */,
-				758A25141BE0914400E3576A /* QRKit-AppKit */,
 				758A25541BE1CBDE00E3576A /* iScan */,
 				758A25361BE177E300E3576A /* iCode */,
 				75E009821CB769D600139F8C /* QRTV */,
+				75DD05B41CB7FF4F0090C6C1 /* Artwork */,
 				758A254E1BE1CB7F00E3576A /* Frameworks */,
 				7510744B19D0ACFC00C85851 /* Products */,
 			);
@@ -235,6 +261,7 @@
 				758A25531BE1CBDD00E3576A /* iScan.app */,
 				75E009811CB769D600139F8C /* QRTV.app */,
 				75DD05891CB771E50090C6C1 /* QRKit.framework */,
+				75DD059E1CB7778E0090C6C1 /* QRKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -242,6 +269,7 @@
 		7510744C19D0ACFC00C85851 /* QRKit */ = {
 			isa = PBXGroup;
 			children = (
+				7510744E19D0ACFC00C85851 /* Info.plist */,
 				7510744F19D0ACFC00C85851 /* QRKit.h */,
 				755ECCC51BE2A9D700638366 /* QRDefines.h */,
 				7510746319D0AE5500C85851 /* QRCoder.h */,
@@ -252,22 +280,6 @@
 				7510746819D0AE8100C85851 /* QRCodeScanner.m */,
 			);
 			path = QRKit;
-			sourceTree = "<group>";
-		};
-		7510744D19D0ACFC00C85851 /* QRKit-UIKit */ = {
-			isa = PBXGroup;
-			children = (
-				7510744E19D0ACFC00C85851 /* Info.plist */,
-			);
-			path = "QRKit-UIKit";
-			sourceTree = "<group>";
-		};
-		758A25141BE0914400E3576A /* QRKit-AppKit */ = {
-			isa = PBXGroup;
-			children = (
-				758A25171BE0914400E3576A /* Info.plist */,
-			);
-			path = "QRKit-AppKit";
 			sourceTree = "<group>";
 		};
 		758A25361BE177E300E3576A /* iCode */ = {
@@ -288,6 +300,10 @@
 		758A254E1BE1CB7F00E3576A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				75DD05B21CB77A620090C6C1 /* ImageIO.framework */,
+				75DD05B01CB77A040090C6C1 /* CoreGraphics.framework */,
+				75DD05AE1CB778BB0090C6C1 /* CoreImage.framework */,
+				75DD05AC1CB778B00090C6C1 /* CoreImage.framework */,
 				758A254C1BE1783900E3576A /* CoreImage.framework */,
 			);
 			name = Frameworks;
@@ -311,9 +327,18 @@
 			path = iScan;
 			sourceTree = "<group>";
 		};
+		75DD05B41CB7FF4F0090C6C1 /* Artwork */ = {
+			isa = PBXGroup;
+			children = (
+				75DD05BA1CB7FF810090C6C1 /* reticle-Template.pdf */,
+			);
+			path = Artwork;
+			sourceTree = "<group>";
+		};
 		75E009821CB769D600139F8C /* QRTV */ = {
 			isa = PBXGroup;
 			children = (
+				75E009841CB769D600139F8C /* main.m */,
 				75E009861CB769D600139F8C /* AppDelegate.h */,
 				75E009871CB769D600139F8C /* AppDelegate.m */,
 				75E009891CB769D600139F8C /* ViewController.h */,
@@ -321,17 +346,8 @@
 				75E0098C1CB769D600139F8C /* Main.storyboard */,
 				75E0098F1CB769D600139F8C /* Assets.xcassets */,
 				75E009911CB769D600139F8C /* Info.plist */,
-				75E009831CB769D600139F8C /* Supporting Files */,
 			);
 			path = QRTV;
-			sourceTree = "<group>";
-		};
-		75E009831CB769D600139F8C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				75E009841CB769D600139F8C /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,6 +384,17 @@
 				75DD05811CB771E50090C6C1 /* QRCoder.h in Headers */,
 				75DD05831CB771E50090C6C1 /* QRDefines.h in Headers */,
 				75DD05841CB771E50090C6C1 /* QRCodeView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75DD059B1CB7778E0090C6C1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75DD05A81CB7787F0090C6C1 /* QRKit.h in Headers */,
+				75DD05A91CB7787F0090C6C1 /* QRDefines.h in Headers */,
+				75DD05AA1CB7787F0090C6C1 /* QRCoder.h in Headers */,
+				75DD05AB1CB7787F0090C6C1 /* QRCodeView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +493,24 @@
 			productReference = 75DD05891CB771E50090C6C1 /* QRKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		75DD059D1CB7778E0090C6C1 /* QRKit-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75DD05A31CB7778E0090C6C1 /* Build configuration list for PBXNativeTarget "QRKit-watchOS" */;
+			buildPhases = (
+				75DD05991CB7778E0090C6C1 /* Sources */,
+				75DD059A1CB7778E0090C6C1 /* Frameworks */,
+				75DD059B1CB7778E0090C6C1 /* Headers */,
+				75DD059C1CB7778E0090C6C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "QRKit-watchOS";
+			productName = "QRKit-watchOS";
+			productReference = 75DD059E1CB7778E0090C6C1 /* QRKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		75E009801CB769D600139F8C /* QRTV */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75E009941CB769D600139F8C /* Build configuration list for PBXNativeTarget "QRTV" */;
@@ -506,6 +551,9 @@
 					758A25521BE1CBDD00E3576A = {
 						CreatedOnToolsVersion = 7.1;
 					};
+					75DD059D1CB7778E0090C6C1 = {
+						CreatedOnToolsVersion = 7.3;
+					};
 					75E009801CB769D600139F8C = {
 						CreatedOnToolsVersion = 7.3;
 					};
@@ -527,6 +575,7 @@
 				7510744919D0ACFC00C85851 /* QRKit-UIKit */,
 				758A25121BE0914400E3576A /* QRKit-AppKit */,
 				75DD05791CB771E50090C6C1 /* QRKit-tvOS */,
+				75DD059D1CB7778E0090C6C1 /* QRKit-watchOS */,
 				758A25521BE1CBDD00E3576A /* iScan */,
 				758A25341BE177E300E3576A /* iCode */,
 				75E009801CB769D600139F8C /* QRTV */,
@@ -539,6 +588,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75DD05BC1CB7FF810090C6C1 /* reticle-Template.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,6 +619,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		75DD05851CB771E50090C6C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75DD059C1CB7778E0090C6C1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -633,6 +690,15 @@
 			files = (
 				75DD057C1CB771E50090C6C1 /* QRCoder.m in Sources */,
 				75DD057D1CB771E50090C6C1 /* QRCodeView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75DD05991CB7778E0090C6C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75DD05A61CB778640090C6C1 /* QRCoder.m in Sources */,
+				75DD05A71CB778640090C6C1 /* QRCodeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -788,7 +854,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "QRKit-UIKit/Info.plist";
+				INFOPLIST_FILE = QRKitt/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.istumbler.labs.QRKit;
@@ -805,7 +871,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "QRKit-UIKit/Info.plist";
+				INFOPLIST_FILE = QRKitt/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.istumbler.labs.QRKit;
@@ -828,7 +894,7 @@
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_VERSION = A;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "QRKit-AppKit/Info.plist";
+				INFOPLIST_FILE = QRKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -852,7 +918,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "QRKit-AppKit/Info.plist";
+				INFOPLIST_FILE = QRKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -907,7 +973,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = iScan/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.istumbler.labs.iScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -922,7 +988,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = iScan/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.istumbler.labs.iScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -936,7 +1002,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "QRKit-UIKit/Info.plist";
+				INFOPLIST_FILE = QRKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.istumbler.labs.QRKit;
@@ -953,13 +1019,60 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "QRKit-UIKit/Info.plist";
+				INFOPLIST_FILE = QRKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.istumbler.labs.QRKit;
 				PRODUCT_NAME = QRKit;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		75DD05A41CB7778E0090C6C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = QRKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.istumbler.labs.QRKit;
+				PRODUCT_NAME = QRKit;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		75DD05A51CB7778E0090C6C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = QRKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.istumbler.labs.QRKit;
+				PRODUCT_NAME = QRKit;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = Release;
 		};
@@ -1056,6 +1169,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		75DD05A31CB7778E0090C6C1 /* Build configuration list for PBXNativeTarget "QRKit-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75DD05A41CB7778E0090C6C1 /* Debug */,
+				75DD05A51CB7778E0090C6C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		75E009941CB769D600139F8C /* Build configuration list for PBXNativeTarget "QRTV" */ = {
 			isa = XCConfigurationList;

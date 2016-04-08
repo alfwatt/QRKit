@@ -1,13 +1,23 @@
 #import "QRCoder.h"
 
+#if !TARGET_OS_WATCH
 #import <CoreImage/CIFilter.h>
 #import <AVFoundation/AVFoundation.h>
+#endif
+
 
 /* http://www.ama-dev.com/iphone-qr-code-library-ios-7/ */
 
 @implementation QRCoder
 
-#if TARGET_OS_IPHONE || TARGET_OS_TV
+#if TARGET_OS_WATCH
+
++ (WKImage*) QRCodeFromString:(NSString *)string withSize:(CGSize)size
+{
+    return nil;
+}
+
+#elif TARGET_OS_IPHONE || TARGET_OS_TV
 
 + (UIImage*) QRCodeFromString:(NSString*) string withSize:(CGSize) size
 {
@@ -28,6 +38,14 @@
 
 #endif
 
+#if TARGET_OS_WATCH
+
++ (CGImageRef) QRCodeImageFromString:(NSString*) string withSize:(CGSize) size
+{
+    return NULL;
+}
+
+#else
 /*
 
  http://stackoverflow.com/questions/22374971/ios-7-core-image-qr-code-generation-too-blur
@@ -68,5 +86,7 @@
     CGImageRelease(scaledImageRef);
     return scaledImage;
 }
+
+#endif
 
 @end
