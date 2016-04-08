@@ -33,6 +33,7 @@
                     </view>
                     <connections>
                         <outlet property="codeView" destination="Vb8-c9-gsR" id="k0q-aI-MlK"/>
+                        <outlet property="preferredFocusedView" destination="8bC-Xf-vdC" id="dYv-wR-dyw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -1,14 +1,16 @@
 #import "QRTVDelegate.h"
+#import "QRTVController.h"
 
 @interface QRTVDelegate ()
-
 @end
 
 @implementation QRTVDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    self.controller = (QRTVController*)self.window.rootViewController;
+
     return YES;
 }
 
@@ -24,10 +26,13 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    [self.controller updateQRCode:self];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [self.controller updateQRCode:self];
+
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

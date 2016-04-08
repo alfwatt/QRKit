@@ -14,6 +14,7 @@
 		7510746A19D0AE8100C85851 /* QRCodeScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 7510746819D0AE8100C85851 /* QRCodeScanner.m */; };
 		7510746F19D0C6B200C85851 /* QRCodeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510746D19D0C6B200C85851 /* QRCodeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7510747019D0C6B200C85851 /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7510746E19D0C6B200C85851 /* QRCodeView.m */; };
+		7535D2CC1CB80F300094255D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7535D2CB1CB80F300094255D /* Settings.bundle */; };
 		755ECCC61BE2A9D700638366 /* QRDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 755ECCC51BE2A9D700638366 /* QRDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		755ECCC71BE2A9D700638366 /* QRDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 755ECCC51BE2A9D700638366 /* QRDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		755ECCCC1BE2DC8900638366 /* QRKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7510744A19D0ACFC00C85851 /* QRKit.framework */; };
@@ -134,6 +135,7 @@
 		7510746819D0AE8100C85851 /* QRCodeScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeScanner.m; sourceTree = "<group>"; };
 		7510746D19D0C6B200C85851 /* QRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeView.h; sourceTree = "<group>"; };
 		7510746E19D0C6B200C85851 /* QRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeView.m; sourceTree = "<group>"; };
+		7535D2CB1CB80F300094255D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		755ECCC51BE2A9D700638366 /* QRDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRDefines.h; sourceTree = "<group>"; };
 		758A25131BE0914400E3576A /* QRKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		758A25351BE177E300E3576A /* iCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -346,6 +348,7 @@
 				75E0098C1CB769D600139F8C /* Main.storyboard */,
 				75E0098F1CB769D600139F8C /* Assets.xcassets */,
 				75E009911CB769D600139F8C /* Info.plist */,
+				7535D2CB1CB80F300094255D /* Settings.bundle */,
 			);
 			path = QRTV;
 			sourceTree = "<group>";
@@ -637,6 +640,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75E009901CB769D600139F8C /* Assets.xcassets in Resources */,
+				7535D2CC1CB80F300094255D /* Settings.bundle in Resources */,
 				75E0098E1CB769D600139F8C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

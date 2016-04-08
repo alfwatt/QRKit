@@ -3,7 +3,9 @@
 
 @interface QRTVController : UIViewController
 
-@property (nonatomic, weak) IBOutlet QRCodeView* codeView;
+@property (nonatomic, assign) IBOutlet QRCodeView* codeView;
+
+- (IBAction) updateQRCode:(id)sender;
 
 @end
 

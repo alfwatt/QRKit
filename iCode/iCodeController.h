@@ -3,8 +3,6 @@
 
 @interface iCodeController : NSViewController
 
-@property(nonatomic,weak) IBOutlet QRCodeView* codeView;
-
-- (IBAction) enterCodeString:(id)sender;
+@property(nonatomic,assign) IBOutlet QRCodeView* codeView;
 
 @end
