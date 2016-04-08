@@ -5,7 +5,7 @@
 #ifndef QRDefines_h
 #define QRDefines_h
 
-#if TARGET_OS_IPHONE
+#if TARGET_OS_IPHONE || TARGET_OS_TV
 #import <UIKit/UIKit.h>
 #define QRView UIView
 #define QRImage UIImage

@@ -31,7 +31,7 @@
 {
     cachedCodeString = encodedString;
     cachedCodeImage = nil;
-#if TARGET_OS_IPHONE
+#if TARGET_OS_IPHONE || TARGET_OS_TV
     [self setNeedsDisplay];
 #else
     [self setNeedsDisplay:YES];
@@ -45,7 +45,7 @@
     [self.codeImage drawInRect:[self insetSquare]];
 }
 
-#if TARGET_OS_IPHONE
+#if TARGET_OS_IPHONE || TARGET_OS_TV
 #pragma mark - UIView Methods
 
 - (void) layoutSubviews

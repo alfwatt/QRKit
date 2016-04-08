@@ -7,7 +7,7 @@
 
 @implementation QRCoder
 
-#if TARGET_OS_IPHONE
+#if TARGET_OS_IPHONE || TARGET_OS_TV
 
 + (UIImage*) QRCodeFromString:(NSString*) string withSize:(CGSize) size
 {
@@ -50,10 +50,10 @@
     // create a blank CGImageRef to apply the filter to
     CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceGray();
     CGContextRef contextRef = CGBitmapContextCreate(nil, size.width, size.height, 8, 0, colorSpaceRef, (CGBitmapInfo)kCGImageAlphaNone);
-#ifdef TARGET_OS_IPHONE
+#if TARGET_OS_IPHONE || TARGET_OS_TV
     CIContext* context = [CIContext contextWithOptions:nil];
 #else
-    CIContext* context = [CIContext contextWithCGContext:bitmapRef options:nil];
+    CIContext* context = [CIContext contextWithCGContext:contextRef options:nil];
 #endif
     
     CGImageRef imageRef = [context createCGImage:codeImage fromRect:codeExtent];

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0710"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "758A25121BE0914400E3576A"
                BuildableName = "QRKit.framework"
-               BlueprintName = "QRKit-MacOS"
+               BlueprintName = "QRKit-AppKit"
                ReferencedContainer = "container:QRKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,7 +47,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "758A25121BE0914400E3576A"
             BuildableName = "QRKit.framework"
-            BlueprintName = "QRKit-MacOS"
+            BlueprintName = "QRKit-AppKit"
             ReferencedContainer = "container:QRKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,7 +65,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "758A25121BE0914400E3576A"
             BuildableName = "QRKit.framework"
-            BlueprintName = "QRKit-MacOS"
+            BlueprintName = "QRKit-AppKit"
             ReferencedContainer = "container:QRKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

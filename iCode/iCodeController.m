@@ -1,6 +1,6 @@
-#import "iScanCodingController.h"
+#import "iCodeController.h"
 
-@implementation iScanCodingController
+@implementation iCodeController
 
 - (IBAction) enterCodeString:(id)sender
 {

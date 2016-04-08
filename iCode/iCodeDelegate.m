@@ -1,10 +1,6 @@
-#import "iScanDelegate.h"
+#import "iCodeDelegate.h"
 
-@interface iScanDelegate ()
-
-@end
-
-@implementation iScanDelegate
+@implementation iCodeDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification*) note
 {

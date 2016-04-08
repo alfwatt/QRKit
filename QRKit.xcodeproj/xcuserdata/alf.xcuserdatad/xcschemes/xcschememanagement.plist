@@ -4,25 +4,35 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>QRKit-MacOS.xcscheme</key>
+		<key>QRKit-AppKit.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>4</integer>
 		</dict>
-		<key>QRKit-iOS.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
-		<key>iCode.xcscheme</key>
+		<key>QRKit-UIKit.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>iScan.xcscheme</key>
+		<key>QRKit-tvOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>QRTV.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
+		</dict>
+		<key>iCode.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>iScan.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -53,6 +63,16 @@
 			<true/>
 		</dict>
 		<key>758A25521BE1CBDD00E3576A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>75DD05791CB771E50090C6C1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>75E009801CB769D600139F8C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
