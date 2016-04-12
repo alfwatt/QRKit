@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>StringsTable</key>
-	<string>Root</string>
+	<string>Settings</string>
 	<key>PreferenceSpecifiers</key>
 	<array>
 		<dict>
@@ -29,6 +29,191 @@
 			<string>None</string>
 			<key>AutocorrectionType</key>
 			<string>No</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Color</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Color</string>
+			<key>Key</key>
+			<string>ColorName</string>
+			<key>DefaultValue</key>
+			<string>Black</string>
+			<key>Values</key>
+			<array>
+				<string>Black</string>
+				<string>Orange</string>
+				<string>Yellow</string>
+				<string>Green</string>
+				<string>Blue</string>
+				<string>Indigo</string>
+				<string>Violet</string>
+				<string>Custom</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Background Color</string>
+			<key>Key</key>
+			<string>BackgroundColor</string>
+			<key>DefaultValue</key>
+			<string>ComplementaryBackground</string>
+			<key>Titles</key>
+			<array>
+				<string>Complementary</string>
+				<string>Black</string>
+				<string>Gray</string>
+				<string>White</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<string>ComplementaryBackground</string>
+				<string>BlackBackground</string>
+				<string>GrayBackground</string>
+				<string>WhiteBackground</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Lock Color</string>
+			<key>Key</key>
+			<string>LockColor</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Custom Color</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Red Component</string>
+			<key>Key</key>
+			<string>CustomColorRedComponent</string>
+			<key>DefaultValue</key>
+			<string>0.50</string>
+			<key>Values</key>
+			<array>
+				<string>0.00</string>
+				<string>0.25</string>
+				<string>0.50</string>
+				<string>0.75</string>
+				<string>1.00</string>
+			</array>
+			<key>Titles</key>
+			<array>
+				<string>0 %</string>
+				<string>25 %</string>
+				<string>50 %</string>
+				<string>75 %</string>
+				<string>100 %</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Green Component</string>
+			<key>Key</key>
+			<string>CustomColorGreenComponent</string>
+			<key>DefaultValue</key>
+			<string>0.50</string>
+			<key>Values</key>
+			<array>
+				<string>0.00</string>
+				<string>0.25</string>
+				<string>0.50</string>
+				<string>0.75</string>
+				<string>1.00</string>
+			</array>
+			<key>Titles</key>
+			<array>
+				<string>0 %</string>
+				<string>25 %</string>
+				<string>50 %</string>
+				<string>75 %</string>
+				<string>100 %</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Blue Component</string>
+			<key>Key</key>
+			<string>CustomColorBlueComponent</string>
+			<key>DefaultValue</key>
+			<string>0.50</string>
+			<key>Values</key>
+			<array>
+				<string>0.00</string>
+				<string>0.25</string>
+				<string>0.50</string>
+				<string>0.75</string>
+				<string>1.00</string>
+			</array>
+			<key>Titles</key>
+			<array>
+				<string>0 %</string>
+				<string>25 %</string>
+				<string>50 %</string>
+				<string>75 %</string>
+				<string>100 %</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Special</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Correction Level</string>
+			<key>Key</key>
+			<string>CorrectionLevel</string>
+			<key>DefaultValue</key>
+			<string>M</string>
+			<key>Values</key>
+			<array>
+				<string>L</string>
+				<string>M</string>
+				<string>Q</string>
+				<string>H</string>
+			</array>
+			<key>Titles</key>
+			<array>
+				<string>Low (7%)</string>
+				<string>Medium (15%)</string>
+				<string>Standard (25%)</string>
+				<string>High (30%)</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Reset QRTV</string>
+			<key>Key</key>
+			<string>ResetApplication</string>
+			<key>DefaultValue</key>
+			<false/>
 		</dict>
 	</array>
 </dict>

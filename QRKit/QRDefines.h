@@ -14,12 +14,14 @@
 #import <UIKit/UIKit.h>
 #define QRView UIView
 #define QRImage UIImage
+#define QRColor UIColor
 #define QRViewController UIViewController
 
 #elif TARGET_OS_MAC
 #import <AppKit/AppKit.h>
 #define QRView NSView
 #define QRImage NSImage
+#define QRColor NSColor
 #define QRViewController NSViewController
 
 #endif

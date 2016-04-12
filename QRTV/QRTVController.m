@@ -12,24 +12,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    // TODO recoginze a tap and put up a text view
-    UITapGestureRecognizer* recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(recognizeTap:)];
-    recognizer.allowedPressTypes = @[@(UIPressTypeSelect)];
-    [self.codeView addGestureRecognizer:recognizer];
-
     [self updateQRCode:self];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-}
-
-#pragma mark - UIGestureRecognizers
-
--  (void) recognizeTap:(UITapGestureRecognizer*) tap
-{
-    NSLog(@"recognizeTap: %@", tap);
 }
 
 @end
