@@ -113,6 +113,7 @@ static NSString* const QRCIInputColor1 = @"inputColor1";
     CGContextRelease(contextRef);
     CGImageRelease(imageRef);
     CGImageRelease(scaledImageRef);
+    CGColorSpaceRelease(colorSpaceRef);
     return scaledImage;
 }
 
