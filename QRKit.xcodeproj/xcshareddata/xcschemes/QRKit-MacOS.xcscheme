@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7510744919D0ACFC00C85851"
+               BlueprintIdentifier = "758A25121BE0914400E3576A"
                BuildableName = "QRKit.framework"
-               BlueprintName = "QRKit-UIKit"
+               BlueprintName = "QRKit-MacOS"
                ReferencedContainer = "container:QRKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7510744919D0ACFC00C85851"
+            BlueprintIdentifier = "758A25121BE0914400E3576A"
             BuildableName = "QRKit.framework"
-            BlueprintName = "QRKit-UIKit"
+            BlueprintName = "QRKit-MacOS"
             ReferencedContainer = "container:QRKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7510744919D0ACFC00C85851"
+            BlueprintIdentifier = "758A25121BE0914400E3576A"
             BuildableName = "QRKit.framework"
-            BlueprintName = "QRKit-UIKit"
+            BlueprintName = "QRKit-MacOS"
             ReferencedContainer = "container:QRKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

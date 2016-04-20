@@ -12,7 +12,7 @@ QRColor* QRComplementaryBackgroundColor(QRColor* color) {
         return [QRColor whiteColor];
     }
     else if ([color isEqual:[QRColor blueColor]]) {
-        UIColor* orange = [QRColor orangeColor];
+        QRColor* orange = [QRColor orangeColor];
         CGFloat hue, saturation, brightness, alpha = 0;
         [orange getHue:&hue saturation:&saturation brightness:&brightness alpha:&alpha];
         return [QRColor colorWithHue:hue saturation:(saturation*0.7) brightness:brightness alpha:alpha];
@@ -83,9 +83,11 @@ QRColor* QRComplementaryBackgroundColor(QRColor* color) {
     BOOL changed = (_codeColor != codeColor);
     _codeColor = codeColor;
     if (changed) {
+#if TARGET_OS_IPHONE
         if (self.complementaryBackground) {
             self.backgroundColor = QRComplementaryBackgroundColor(self.codeColor);
         }
+#endif
         [self clearImageCache];
     }
 }
@@ -109,6 +111,13 @@ QRColor* QRComplementaryBackgroundColor(QRColor* color) {
 
 - (void)drawRect:(CGRect)rect
 {
+#if TARGET_OS_MAC && !TARGET_OS_IPHONE
+    if (self.complementaryBackground) {
+        NSColor* complement = QRComplementaryBackgroundColor(self.codeColor);
+        [complement setFill];
+        [NSBezierPath fillRect:rect];
+    }
+#endif
     [self.codeImage drawInRect:[self insetSquare]];
 }
 

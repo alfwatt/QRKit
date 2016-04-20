@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "75E009801CB769D600139F8C"
-               BuildableName = "QRTV.app"
-               BlueprintName = "QRTV"
+               BlueprintIdentifier = "7510744919D0ACFC00C85851"
+               BuildableName = "QRKit.framework"
+               BlueprintName = "QRKit-iOS"
                ReferencedContainer = "container:QRKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "75E009801CB769D600139F8C"
-            BuildableName = "QRTV.app"
-            BlueprintName = "QRTV"
-            ReferencedContainer = "container:QRKit.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,23 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "75E009801CB769D600139F8C"
-            BuildableName = "QRTV.app"
-            BlueprintName = "QRTV"
+            BlueprintIdentifier = "7510744919D0ACFC00C85851"
+            BuildableName = "QRKit.framework"
+            BlueprintName = "QRKit-iOS"
             ReferencedContainer = "container:QRKit.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "CGBITMAP_CONTEXT_LOG_ERRORS"
-            value = "YES"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -77,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "75E009801CB769D600139F8C"
-            BuildableName = "QRTV.app"
-            BlueprintName = "QRTV"
+            BlueprintIdentifier = "7510744919D0ACFC00C85851"
+            BuildableName = "QRKit.framework"
+            BlueprintName = "QRKit-iOS"
             ReferencedContainer = "container:QRKit.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

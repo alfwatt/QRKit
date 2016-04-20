@@ -26,9 +26,9 @@
 
 #else
 
-+ (NSImage*) QRCodeFromString:(NSString*) string withAttributes:(NSDictionary*) attrs withSize:(CGSize) size codeColor(NSColor*)color
++ (NSImage*) QRCodeFromString:(NSString*) string withAttributes:(NSDictionary*) attrs withSize:(CGSize) size codeColor:(NSColor*)color
 {
-    NSCIImageRep* imageRep = [NSCIImageRep imageRepWithCIImage:[self QRCodeImageFromString:string withAttributes:attrs withSize:size] color:color.CGColor];
+    NSCIImageRep* imageRep = [NSCIImageRep imageRepWithCIImage:[self QRCodeImageFromString:string withAttributes:attrs withSize:size codeColor:color.CGColor]];
     NSImage* image = [[NSImage alloc] initWithSize:NSSizeFromCGSize(size)];
     imageRep.size = NSSizeFromCGSize(size);
     [image addRepresentation:imageRep];
