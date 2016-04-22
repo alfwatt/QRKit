@@ -11,8 +11,6 @@
 
 static NSString* const QRInputMessage = @"inputMessage";
 
-static NSString* const QRCIQRCodeGenerator = @"CIQRCodeGenerator";
-
 static NSString* const QRInputCorrectionLevel = @"inputCorrectionLevel";
 static NSString* const QRInputCorrectionLevelL = @"L"; // 7%
 static NSString* const QRInputCorrectionLevelM = @"M"; // 15%

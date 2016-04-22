@@ -53,10 +53,6 @@
 
 */
 
-static NSString* const QRCIFalseColor = @"CIFalseColor";
-static NSString* const QRCIInputColor0 = @"inputColor0";
-static NSString* const QRCIInputColor1 = @"inputColor1";
-
 + (CIImage*) QRCodeImageFromString:(NSString*) string withAttributes:(NSDictionary*) attrs withSize:(CGSize) size codeColor:(CGColorRef) color
 {
     if( !string) { // catch a nil string here
@@ -77,16 +73,16 @@ static NSString* const QRCIInputColor1 = @"inputColor1";
         correctionLevel = attrsCorrectionLevel;
     }
 
-    CIFilter* qrCodeFilter = [CIFilter filterWithName:QRCIQRCodeGenerator withInputParameters:@{
+    CIFilter* qrCodeFilter = [CIFilter filterWithName:@"CIQRCodeGenerator" withInputParameters:@{
         QRInputMessage: stringData,
         QRInputCorrectionLevel: correctionLevel}];
     CIImage* codeImage = qrCodeFilter.outputImage;
 
     // convert the image to the color provided
-    CIFilter* codeColorFilter = [CIFilter filterWithName:QRCIFalseColor withInputParameters:@{
+    CIFilter* codeColorFilter = [CIFilter filterWithName:@"CIFalseColor" withInputParameters:@{
         kCIInputImageKey:codeImage,
-        QRCIInputColor0:codeColor,
-        QRCIInputColor1:clearColor
+        @"inputColor0":codeColor,
+        @"inputColor1":clearColor
     }];
     CIImage* coloredImage = codeColorFilter.outputImage;
 
