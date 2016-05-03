@@ -20,7 +20,7 @@
 
 #pragma mark - AVFoundationSetup
 
-- (void) setupScanner;
+- (void) setupScanner
 {
     self.device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     
@@ -41,7 +41,7 @@
     
     AVCaptureConnection *con = self.preview.connection;
     
-    con.videoOrientation = AVCaptureVideoOrientationLandscapeLeft;
+    con.videoOrientation = AVCaptureVideoOrientationPortrait;
     
     [self.view.layer insertSublayer:self.preview atIndex:0];
 }

@@ -14,6 +14,9 @@
 		7510746A19D0AE8100C85851 /* QRCodeScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 7510746819D0AE8100C85851 /* QRCodeScanner.m */; };
 		7510746F19D0C6B200C85851 /* QRCodeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510746D19D0C6B200C85851 /* QRCodeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7510747019D0C6B200C85851 /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7510746E19D0C6B200C85851 /* QRCodeView.m */; };
+		7546D3021CD885E700424170 /* iScan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7546D3011CD885E700424170 /* iScan.storyboard */; };
+		7546D3081CD8884500424170 /* iScanCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7546D3071CD8884500424170 /* iScanCodeViewController.m */; };
+		7546D30B1CD8886600424170 /* iScanCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7546D30A1CD8886600424170 /* iScanCameraViewController.m */; };
 		755ECCC61BE2A9D700638366 /* QRDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 755ECCC51BE2A9D700638366 /* QRDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		755ECCC71BE2A9D700638366 /* QRDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 755ECCC51BE2A9D700638366 /* QRDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		755ECCCC1BE2DC8900638366 /* QRKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7510744A19D0ACFC00C85851 /* QRKit.framework */; };
@@ -23,17 +26,12 @@
 		758A252D1BE0962E00E3576A /* QRCodeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7510746D19D0C6B200C85851 /* QRCodeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		758A252E1BE0963100E3576A /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7510746E19D0C6B200C85851 /* QRCodeView.m */; };
 		758A25391BE177E300E3576A /* iCodeDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 758A25381BE177E300E3576A /* iCodeDelegate.m */; };
-		758A253C1BE177E300E3576A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 758A253B1BE177E300E3576A /* main.m */; };
 		758A253F1BE177E300E3576A /* iCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758A253E1BE177E300E3576A /* iCodeController.m */; };
 		758A25411BE177E300E3576A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 758A25401BE177E300E3576A /* Assets.xcassets */; };
 		758A25441BE177E300E3576A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758A25421BE177E300E3576A /* Main.storyboard */; };
 		758A25491BE1781900E3576A /* QRKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758A25131BE0914400E3576A /* QRKit.framework */; };
 		758A254D1BE1783900E3576A /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758A254C1BE1783900E3576A /* CoreImage.framework */; };
-		758A25571BE1CBDE00E3576A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 758A25561BE1CBDE00E3576A /* main.m */; };
 		758A255A1BE1CBDE00E3576A /* iScanDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 758A25591BE1CBDE00E3576A /* iScanDelegate.m */; };
-		758A255D1BE1CBDE00E3576A /* CodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758A255C1BE1CBDE00E3576A /* CodeViewController.m */; };
-		758A25601BE1CBDE00E3576A /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758A255F1BE1CBDE00E3576A /* ScanViewController.m */; };
-		758A25631BE1CBDE00E3576A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758A25611BE1CBDE00E3576A /* Main.storyboard */; };
 		758A25651BE1CBDE00E3576A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 758A25641BE1CBDE00E3576A /* Assets.xcassets */; };
 		758A25681BE1CBDE00E3576A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758A25661BE1CBDE00E3576A /* LaunchScreen.storyboard */; };
 		75DD057C1CB771E50090C6C1 /* QRCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7510746419D0AE5500C85851 /* QRCoder.m */; };
@@ -109,12 +107,16 @@
 		7510746819D0AE8100C85851 /* QRCodeScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeScanner.m; sourceTree = "<group>"; };
 		7510746D19D0C6B200C85851 /* QRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeView.h; sourceTree = "<group>"; };
 		7510746E19D0C6B200C85851 /* QRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeView.m; sourceTree = "<group>"; };
+		7546D3011CD885E700424170 /* iScan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iScan.storyboard; sourceTree = "<group>"; };
+		7546D3061CD8884500424170 /* iScanCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iScanCodeViewController.h; path = ../../qrkit/iScan/iScanCodeViewController.h; sourceTree = "<group>"; };
+		7546D3071CD8884500424170 /* iScanCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iScanCodeViewController.m; path = ../../qrkit/iScan/iScanCodeViewController.m; sourceTree = "<group>"; };
+		7546D3091CD8886600424170 /* iScanCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iScanCameraViewController.h; path = ../../qrkit/iScan/iScanCameraViewController.h; sourceTree = "<group>"; };
+		7546D30A1CD8886600424170 /* iScanCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iScanCameraViewController.m; path = ../../qrkit/iScan/iScanCameraViewController.m; sourceTree = "<group>"; };
 		755ECCC51BE2A9D700638366 /* QRDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRDefines.h; sourceTree = "<group>"; };
 		758A25131BE0914400E3576A /* QRKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		758A25351BE177E300E3576A /* iCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		758A25371BE177E300E3576A /* iCodeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iCodeDelegate.h; sourceTree = "<group>"; };
 		758A25381BE177E300E3576A /* iCodeDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iCodeDelegate.m; sourceTree = "<group>"; };
-		758A253B1BE177E300E3576A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		758A253D1BE177E300E3576A /* iCodeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iCodeController.h; sourceTree = "<group>"; };
 		758A253E1BE177E300E3576A /* iCodeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iCodeController.m; sourceTree = "<group>"; };
 		758A25401BE177E300E3576A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,14 +124,8 @@
 		758A25451BE177E300E3576A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		758A254C1BE1783900E3576A /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
 		758A25531BE1CBDD00E3576A /* iScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		758A25561BE1CBDE00E3576A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		758A25581BE1CBDE00E3576A /* iScanDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iScanDelegate.h; sourceTree = "<group>"; };
 		758A25591BE1CBDE00E3576A /* iScanDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iScanDelegate.m; sourceTree = "<group>"; };
-		758A255B1BE1CBDE00E3576A /* CodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodeViewController.h; sourceTree = "<group>"; };
-		758A255C1BE1CBDE00E3576A /* CodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeViewController.m; sourceTree = "<group>"; };
-		758A255E1BE1CBDE00E3576A /* ScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
-		758A255F1BE1CBDE00E3576A /* ScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
-		758A25621BE1CBDE00E3576A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		758A25641BE1CBDE00E3576A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		758A25671BE1CBDE00E3576A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		758A25691BE1CBDE00E3576A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -241,14 +237,13 @@
 		758A25361BE177E300E3576A /* iCode */ = {
 			isa = PBXGroup;
 			children = (
-				758A253B1BE177E300E3576A /* main.m */,
+				758A25451BE177E300E3576A /* Info.plist */,
 				758A25371BE177E300E3576A /* iCodeDelegate.h */,
 				758A25381BE177E300E3576A /* iCodeDelegate.m */,
 				758A253D1BE177E300E3576A /* iCodeController.h */,
 				758A253E1BE177E300E3576A /* iCodeController.m */,
 				758A25401BE177E300E3576A /* Assets.xcassets */,
 				758A25421BE177E300E3576A /* Main.storyboard */,
-				758A25451BE177E300E3576A /* Info.plist */,
 			);
 			path = iCode;
 			sourceTree = "<group>";
@@ -268,17 +263,16 @@
 		758A25541BE1CBDE00E3576A /* iScan */ = {
 			isa = PBXGroup;
 			children = (
-				758A25561BE1CBDE00E3576A /* main.m */,
+				758A25691BE1CBDE00E3576A /* Info.plist */,
 				758A25581BE1CBDE00E3576A /* iScanDelegate.h */,
 				758A25591BE1CBDE00E3576A /* iScanDelegate.m */,
-				758A255B1BE1CBDE00E3576A /* CodeViewController.h */,
-				758A255C1BE1CBDE00E3576A /* CodeViewController.m */,
-				758A255E1BE1CBDE00E3576A /* ScanViewController.h */,
-				758A255F1BE1CBDE00E3576A /* ScanViewController.m */,
-				758A25611BE1CBDE00E3576A /* Main.storyboard */,
-				758A25641BE1CBDE00E3576A /* Assets.xcassets */,
+				7546D3061CD8884500424170 /* iScanCodeViewController.h */,
+				7546D3071CD8884500424170 /* iScanCodeViewController.m */,
+				7546D3091CD8886600424170 /* iScanCameraViewController.h */,
+				7546D30A1CD8886600424170 /* iScanCameraViewController.m */,
+				7546D3011CD885E700424170 /* iScan.storyboard */,
 				758A25661BE1CBDE00E3576A /* LaunchScreen.storyboard */,
-				758A25691BE1CBDE00E3576A /* Info.plist */,
+				758A25641BE1CBDE00E3576A /* Assets.xcassets */,
 			);
 			path = iScan;
 			sourceTree = "<group>";
@@ -532,7 +526,7 @@
 			files = (
 				758A25681BE1CBDE00E3576A /* LaunchScreen.storyboard in Resources */,
 				758A25651BE1CBDE00E3576A /* Assets.xcassets in Resources */,
-				758A25631BE1CBDE00E3576A /* Main.storyboard in Resources */,
+				7546D3021CD885E700424170 /* iScan.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,9 +570,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				758A253F1BE177E300E3576A /* iCodeController.m in Sources */,
-				758A253C1BE177E300E3576A /* main.m in Sources */,
 				758A25391BE177E300E3576A /* iCodeDelegate.m in Sources */,
+				758A253F1BE177E300E3576A /* iCodeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,10 +579,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				758A25601BE1CBDE00E3576A /* ScanViewController.m in Sources */,
+				7546D30B1CD8886600424170 /* iScanCameraViewController.m in Sources */,
+				7546D3081CD8884500424170 /* iScanCodeViewController.m in Sources */,
 				758A255A1BE1CBDE00E3576A /* iScanDelegate.m in Sources */,
-				758A255D1BE1CBDE00E3576A /* CodeViewController.m in Sources */,
-				758A25571BE1CBDE00E3576A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,14 +623,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				758A25431BE177E300E3576A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		758A25611BE1CBDE00E3576A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				758A25621BE1CBDE00E3576A /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -867,6 +851,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -886,6 +871,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
