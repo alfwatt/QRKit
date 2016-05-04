@@ -3,17 +3,59 @@
 
 @interface QRCodeScanner ()
 
-@property (strong, nonatomic) AVCaptureDevice* device;
-@property (strong, nonatomic) AVCaptureDeviceInput* input;
-@property (strong, nonatomic) AVCaptureSession* session;
-@property (strong, nonatomic) AVCaptureVideoPreviewLayer* preview;
-@property (strong, nonatomic) AVCaptureMetadataOutput* output;
+@property(nonatomic, retain) NSString* decodedStringStorage;
+@property(nonatomic, retain) AVCaptureDevice* device;
+@property(nonatomic, retain) AVCaptureDeviceInput* input;
+@property(nonatomic, retain) AVCaptureSession* session;
+@property(nonatomic, retain) AVCaptureVideoPreviewLayer* preview;
+@property(nonatomic, retain) AVCaptureMetadataOutput* output;
 
 - (void) initView;
+- (void) updatePreviewFrameAndOrientation;
 
 @end
 
 @implementation QRCodeScanner
+
+#pragma mark - Properties
+
+- (NSString*) decodedString
+{
+    return self.decodedStringStorage;
+}
+
+- (BOOL) cameraIsAvailable
+{
+    NSArray *videoDevices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
+    return [videoDevices count] > 0;
+}
+
+- (BOOL) cameraLightIsOn
+{
+    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    return (device.torchMode == AVCaptureTorchModeOn);
+}
+
+- (void) setCameraLightIsOn:(BOOL) aStatus
+{
+    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    [device lockForConfiguration:nil];
+    if ( [device hasTorch] ) {
+        if ( aStatus ) {
+            [device setTorchMode:AVCaptureTorchModeOn];
+        } else {
+            [device setTorchMode:AVCaptureTorchModeOff];
+        }
+    }
+    [device unlockForConfiguration];
+
+    if ([self.delegate respondsToSelector:@selector(scanViewController:didSetLight:)]) {
+        [self.delegate scanViewController:self didSetLight:self.cameraLightIsOn];
+    }
+}
+
+#pragma mark - Initilizers
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,7 +77,7 @@
     return self;
 }
 
-#pragma mark - AVFoundationSetup
+#pragma mark - Private Methods
 
 - (void) initView
 {
@@ -67,117 +109,46 @@
     
     self.preview = [AVCaptureVideoPreviewLayer layerWithSession:self.session];
     self.preview.videoGravity = AVLayerVideoGravityResizeAspectFill;
-    self.preview.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-    
-    AVCaptureConnection *con = self.preview.connection;
-    
-    con.videoOrientation = AVCaptureVideoOrientationPortrait;
-    
+    [self updatePreviewFrameAndOrientation];
     [self.view.layer insertSublayer:self.preview atIndex:0];
+
+    UITapGestureRecognizer* tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleFocusTap:)];
+    tapRecognizer.numberOfTapsRequired = 1;
+    tapRecognizer.numberOfTouchesRequired = 1;
+    [self.view addGestureRecognizer:tapRecognizer];
+
+    UITapGestureRecognizer* twoFinderTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleLightTap:)];
+    twoFinderTapRecognizer.numberOfTapsRequired = 1;
+    twoFinderTapRecognizer.numberOfTouchesRequired = 2;
+    [self.view addGestureRecognizer:twoFinderTapRecognizer];
 }
 
-#pragma mark - Helper Methods
-
-- (BOOL) isCameraAvailable;
+- (void) updatePreviewFrameAndOrientation
 {
-    NSArray *videoDevices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
-    return [videoDevices count] > 0;
-}
+    self.preview.frame = self.view.frame;
 
-- (void)startScanning;
-{
-    [self.session startRunning];
-    if ([self.delegate respondsToSelector:@selector(scanViewControllerDidStartScanning:)]) {
-        [self.delegate scanViewControllerDidStartScanning:self];
+    AVCaptureVideoOrientation captureOrientation = AVCaptureVideoOrientationPortrait;
+
+    switch ([UIDevice currentDevice].orientation) {
+        case UIDeviceOrientationPortraitUpsideDown:
+            captureOrientation = AVCaptureVideoOrientationPortraitUpsideDown;
+            break;
+        case UIDeviceOrientationLandscapeLeft:
+            captureOrientation = AVCaptureVideoOrientationLandscapeRight;
+            break;
+        case UIDeviceOrientationLandscapeRight:
+            captureOrientation = AVCaptureVideoOrientationLandscapeLeft;
+            break;
+        case UIDeviceOrientationUnknown:
+        case UIDeviceOrientationPortrait:
+        case UIDeviceOrientationFaceUp:
+        case UIDeviceOrientationFaceDown:
+        default:
+            captureOrientation = AVCaptureVideoOrientationPortrait;
+            break;
     }
-}
 
-- (void) stopScanning;
-{
-    [self.session stopRunning];
-    if ([self.delegate respondsToSelector:@selector(scanViewControllerDidStartScanning:)]) {
-        [self.delegate scanViewControllerDidStartScanning:self];
-    }
-}
-
-#pragma mark - UIView
-
-- (void)viewWillAppear:(BOOL)animated;
-{
-    [super viewWillAppear:animated];
-    if(![self isCameraAvailable]) {
-        [self setupNoCameraView];
-    }
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    if(![self isCameraAvailable]) {
-        [self setupNoCameraView];
-    }
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)evt
-{
-    if(self.touchToFocusEnabled) {
-        UITouch *touch=[touches anyObject];
-        CGPoint pt= [touch locationInView:self.view];
-        [self focus:pt];
-    }
-}
-
-#pragma mark - NoCamAvailable
-
-- (void) setupNoCameraView
-{
-    UILabel *labelNoCam = [[UILabel alloc] init];
-    labelNoCam.text = @"No Camera available";
-    labelNoCam.textColor = [UIColor blackColor];
-    [self.view addSubview:labelNoCam];
-    [labelNoCam sizeToFit];
-    labelNoCam.center = self.view.center;
-}
-
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations
-{
-    return UIInterfaceOrientationMaskLandscape;
-}
-
-- (BOOL)shouldAutorotate
-{
-    return (UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation]));
-}
-
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
-{
-    if([[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeLeft) {
-        AVCaptureConnection *con = self.preview.connection;
-        con.videoOrientation = AVCaptureVideoOrientationLandscapeRight;
-    } else {
-        AVCaptureConnection *con = self.preview.connection;
-        con.videoOrientation = AVCaptureVideoOrientationLandscapeLeft;
-    }
-}
-
-- (void) setLight:(BOOL) aStatus
-{
-    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-    [device lockForConfiguration:nil];
-    if ( [device hasTorch] ) {
-        if ( aStatus ) {
-            [device setTorchMode:AVCaptureTorchModeOn];
-        } else {
-            [device setTorchMode:AVCaptureTorchModeOff];
-        }
-    }
-    [device unlockForConfiguration];
+    self.preview.connection.videoOrientation = captureOrientation;
 }
 
 - (void) focus:(CGPoint) aPoint
@@ -204,6 +175,60 @@
     }
 }
 
+#pragma mark - Public Methods
+
+- (void)startScanning;
+{
+    [self.session startRunning];
+    if ([self.delegate respondsToSelector:@selector(scanViewControllerDidStartScanning:)]) {
+        [self.delegate scanViewControllerDidStartScanning:self];
+    }
+}
+
+- (void) stopScanning;
+{
+    [self.session stopRunning];
+    if ([self.delegate respondsToSelector:@selector(scanViewControllerDidStartScanning:)]) {
+        [self.delegate scanViewControllerDidStartScanning:self];
+    }
+}
+
+#pragma mark - UIView
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    [self updatePreviewFrameAndOrientation];
+}
+
+#pragma mark - UIGestureRecognizers
+
+- (void) handleFocusTap:(UITapGestureRecognizer*) tap
+{
+    [self focus:[tap locationInView:self.view]];
+}
+
+- (void) handleLightTap:(UITapGestureRecognizer*) tap
+{
+    self.cameraLightIsOn = !(self.cameraLightIsOn); // toggle the torch
+}
+
+#pragma mark - NoCamAvailable
+
+- (void) setupNoCameraView
+{
+    UILabel *labelNoCam = [[UILabel alloc] init];
+    labelNoCam.text = @"No Camera available";
+    labelNoCam.textColor = [UIColor blackColor];
+    [self.view addSubview:labelNoCam];
+    [labelNoCam sizeToFit];
+    labelNoCam.center = self.view.center;
+}
+
 #pragma mark -
 #pragma mark AVCaptureMetadataOutputObjectsDelegate
 
@@ -214,7 +239,10 @@
         if([current isKindOfClass:[AVMetadataMachineReadableCodeObject class]]) {
             if([self.delegate respondsToSelector:@selector(scanViewController:didSuccessfullyScan:)]) {
                 NSString *scannedValue = [((AVMetadataMachineReadableCodeObject *) current) stringValue];
-                [self.delegate scanViewController:self didSuccessfullyScan:scannedValue];
+                if (![scannedValue isEqualToString:self.decodedString]) { // only notify once
+                    self.decodedStringStorage = scannedValue;
+                    [self.delegate scanViewController:self didSuccessfullyScan:scannedValue];
+                }
             }
         }
     }

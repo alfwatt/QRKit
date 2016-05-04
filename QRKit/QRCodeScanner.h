@@ -11,14 +11,13 @@
 
 @property(nonatomic, readonly) NSString* decodedString;
 @property(nonatomic, assign) id<QRCodeScannerDelegate> delegate;
-@property(assign, nonatomic) BOOL touchToFocusEnabled;
+@property(nonatomic, readonly) BOOL cameraIsAvailable;
+@property(nonatomic, assign) BOOL cameraLightIsOn;
 
 - (id) initWithView:(UIView*) view delegate:(id<QRCodeScannerDelegate>) delegate;
 
-- (BOOL) isCameraAvailable;
 - (void) startScanning;
 - (void) stopScanning;
-- (void) setLight:(BOOL) aStatus;
 
 @end
 

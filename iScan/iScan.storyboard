@@ -18,32 +18,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YUf-Hp-cqU">
-                                <rect key="frame" x="0.0" y="66" width="600" height="485"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Np0-Ra-ba6">
-                                <rect key="frame" x="0.0" y="28" width="600" height="30"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Np0-Ra-ba6">
+                                        <rect key="frame" x="0.0" y="521" width="600" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="vSg-gb-YRk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="IEX-kV-A7y"/>
-                                    <constraint firstAttribute="height" constant="30" id="vSg-gb-YRk"/>
+                                    <constraint firstAttribute="trailing" secondItem="Np0-Ra-ba6" secondAttribute="trailing" id="Tkk-16-15C"/>
+                                    <constraint firstItem="Np0-Ra-ba6" firstAttribute="leading" secondItem="YUf-Hp-cqU" secondAttribute="leading" id="q7A-rp-WAd"/>
+                                    <constraint firstAttribute="bottom" secondItem="Np0-Ra-ba6" secondAttribute="bottom" id="rXg-Xb-Snw"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Np0-Ra-ba6" firstAttribute="leading" secondItem="RQ0-53-DFL" secondAttribute="leading" id="Esj-2u-5Kv"/>
-                            <constraint firstItem="YUf-Hp-cqU" firstAttribute="leading" secondItem="RQ0-53-DFL" secondAttribute="leading" id="SVQ-re-GCa"/>
-                            <constraint firstItem="YUf-Hp-cqU" firstAttribute="top" secondItem="Np0-Ra-ba6" secondAttribute="bottom" constant="8" id="UMi-Uz-qJV"/>
-                            <constraint firstItem="bNQ-KP-rSK" firstAttribute="top" secondItem="YUf-Hp-cqU" secondAttribute="bottom" id="bOJ-mG-5ce"/>
-                            <constraint firstItem="Np0-Ra-ba6" firstAttribute="top" secondItem="bCq-jA-xQj" secondAttribute="bottom" constant="8" id="cUP-3q-f3j"/>
-                            <constraint firstAttribute="trailing" secondItem="YUf-Hp-cqU" secondAttribute="trailing" id="dOf-j4-16s"/>
-                            <constraint firstAttribute="trailing" secondItem="Np0-Ra-ba6" secondAttribute="trailing" id="ry4-18-JvF"/>
+                            <constraint firstItem="bNQ-KP-rSK" firstAttribute="top" secondItem="YUf-Hp-cqU" secondAttribute="bottom" id="egO-2t-NXg"/>
+                            <constraint firstItem="YUf-Hp-cqU" firstAttribute="leading" secondItem="RQ0-53-DFL" secondAttribute="leading" id="h7D-Ug-FuK"/>
+                            <constraint firstAttribute="trailing" secondItem="YUf-Hp-cqU" secondAttribute="trailing" id="uxy-db-fBv"/>
+                            <constraint firstItem="YUf-Hp-cqU" firstAttribute="top" secondItem="RQ0-53-DFL" secondAttribute="top" id="vBz-M6-l6P"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Scan" image="camera" id="SDP-gH-V9h"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="scanText" destination="Np0-Ra-ba6" id="n9C-j5-KUk"/>
                         <outlet property="scanView" destination="YUf-Hp-cqU" id="HhY-Gf-vhl"/>
@@ -109,6 +113,7 @@
         <scene sceneID="DeS-0r-9oS">
             <objects>
                 <tabBarController title="iScan" id="d74-tt-9Zl" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" itemPositioning="fill" id="PNy-L1-S1X">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
