@@ -1,11 +1,3 @@
-//
-//  iScanCameraViewController.m
-//  QRKit
-//
-//  Created by Alf Watt on 5/3/16.
-//  Copyright © 2016 iStumbler. All rights reserved.
-//
-
 #import "iScanCameraViewController.h"
 
 @interface iScanCameraViewController ()
@@ -17,11 +9,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.scanText.text = @"Setting up Camera";
-    self.scanner = [[QRCodeScanner alloc] initWithNibName:nil bundle:[NSBundle mainBundle]];
-    self.scanner.delegate = self;
-    self.scanner.view = self.scanView;
+    self.scanner = [[QRCodeScanner alloc] initWithView:self.scanView delegate:self];
     if (self.scanner.isCameraAvailable) {
-        [self.scanner viewDidLoad];
         [self.scanner startScanning];
         self.scanText.text = @"Scanning";
     }
@@ -46,6 +35,16 @@
 */
 
 #pragma mark -
+
+- (void) scanViewControllerDidStartScanning:(QRCodeScanner*) scanner
+{
+    NSLog(@"scanViewControllerDidStartScanning: %@", scanner);
+}
+
+- (void) scanViewController:(QRCodeScanner*) scanner didSetLight:(BOOL) lightStatus
+{
+    NSLog(@"scanViewController:didSetLight: %@", (lightStatus ? @"On" : @"Off"));
+}
 
 - (void) scanViewController:(QRCodeScanner*) scanner didSuccessfullyScan:(NSString *) aScannedValue
 {

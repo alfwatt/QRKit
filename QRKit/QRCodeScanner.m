@@ -9,18 +9,35 @@
 @property (strong, nonatomic) AVCaptureVideoPreviewLayer* preview;
 @property (strong, nonatomic) AVCaptureMetadataOutput* output;
 
+- (void) initView;
+
 @end
 
 @implementation QRCodeScanner
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    return [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        [self initView];
+    }
+
+    return self;
+}
+
+- (id) initWithView:(UIView*) view delegate:(id<QRCodeScannerDelegate>) delegate
+{
+    if (self = [super initWithNibName:nil bundle:[NSBundle bundleForClass:[self class]]]) {
+        self.view = view;
+        self.delegate = delegate;
+        [self initView];
+    }
+
+    return self;
 }
 
 #pragma mark - AVFoundationSetup
 
-- (void) setupScanner
+- (void) initView
 {
     self.device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     
@@ -33,7 +50,20 @@
     [self.session addInput:self.input];
     
     [self.output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
-    self.output.metadataObjectTypes = @[AVMetadataObjectTypeQRCode];
+    self.output.metadataObjectTypes = @[
+        AVMetadataObjectTypeUPCECode,
+        AVMetadataObjectTypeCode39Code,
+        AVMetadataObjectTypeCode39Mod43Code,
+        AVMetadataObjectTypeEAN13Code,
+        AVMetadataObjectTypeEAN8Code,
+        AVMetadataObjectTypeCode93Code,
+        AVMetadataObjectTypeCode128Code,
+        AVMetadataObjectTypePDF417Code,
+        AVMetadataObjectTypeQRCode,
+        AVMetadataObjectTypeAztecCode,
+        AVMetadataObjectTypeInterleaved2of5Code,
+        AVMetadataObjectTypeITF14Code,
+        AVMetadataObjectTypeDataMatrixCode];
     
     self.preview = [AVCaptureVideoPreviewLayer layerWithSession:self.session];
     self.preview.videoGravity = AVLayerVideoGravityResizeAspectFill;
@@ -57,12 +87,17 @@
 - (void)startScanning;
 {
     [self.session startRunning];
-    
+    if ([self.delegate respondsToSelector:@selector(scanViewControllerDidStartScanning:)]) {
+        [self.delegate scanViewControllerDidStartScanning:self];
+    }
 }
 
 - (void) stopScanning;
 {
     [self.session stopRunning];
+    if ([self.delegate respondsToSelector:@selector(scanViewControllerDidStartScanning:)]) {
+        [self.delegate scanViewControllerDidStartScanning:self];
+    }
 }
 
 #pragma mark - UIView
@@ -75,16 +110,11 @@
     }
 }
 
-- (void) viewDidAppear:(BOOL)animated;
+- (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    if([self isCameraAvailable]) {
-        [self setupScanner];
+    if(![self isCameraAvailable]) {
+        [self setupNoCameraView];
     }
 }
 

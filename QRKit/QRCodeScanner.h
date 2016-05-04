@@ -7,12 +7,13 @@
 @protocol QRCodeScannerDelegate;
 
 /** @class QRCodeScanner a view which scans for QR coode with an overlay */
-
 @interface QRCodeScanner : UIViewController <AVCaptureMetadataOutputObjectsDelegate>
 
-@property(nonatomic,readonly) NSString* decodedString;
-@property(nonatomic,assign) id<QRCodeScannerDelegate> delegate;
-@property (assign, nonatomic) BOOL touchToFocusEnabled;
+@property(nonatomic, readonly) NSString* decodedString;
+@property(nonatomic, assign) id<QRCodeScannerDelegate> delegate;
+@property(assign, nonatomic) BOOL touchToFocusEnabled;
+
+- (id) initWithView:(UIView*) view delegate:(id<QRCodeScannerDelegate>) delegate;
 
 - (BOOL) isCameraAvailable;
 - (void) startScanning;
@@ -23,10 +24,14 @@
 
 #pragma mark -
 
+/*! @protocol QRCodeScannerDelegate is notifited durring various stages of the scanning process */
 @protocol QRCodeScannerDelegate <NSObject>
 @optional
 
-- (void) scanViewController:(QRCodeScanner*) scanner didSuccessfullyScan:(NSString *) aScannedValue;
+- (void) scanViewControllerDidStartScanning:(QRCodeScanner*) scanner;
+- (void) scanViewController:(QRCodeScanner*) scanner didSetLight:(BOOL) lightStatus;
+- (void) scanViewController:(QRCodeScanner*) scanner didSuccessfullyScan:(NSString*) aScannedValue;
 - (void) scanViewController:(QRCodeScanner*) scanner didTapToFocusOnPoint:(CGPoint) aPoint;
+- (void) scanViewControllerDidStopScanning:(QRCodeScanner*) scanner;
 
 @end
