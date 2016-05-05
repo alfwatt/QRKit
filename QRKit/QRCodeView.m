@@ -1,33 +1,6 @@
 #import "QRCodeView.h"
 #import "QRCoder.h"
 
-#if !TARGET_OS_WATCH
-QRColor* QRComplementaryBackgroundColor(QRColor* color) {
-    if ([color isEqual:[QRColor whiteColor]]
-        || [color isEqual:[QRColor lightGrayColor]]) {
-        return [QRColor blackColor];
-    }
-    else if ([color isEqual:[QRColor blackColor]]
-             || [color isEqual:[QRColor grayColor]]) {
-        return [QRColor whiteColor];
-    }
-    else if ([color isEqual:[QRColor blueColor]]) {
-        QRColor* orange = [QRColor orangeColor];
-        CGFloat hue, saturation, brightness, alpha = 0;
-        [orange getHue:&hue saturation:&saturation brightness:&brightness alpha:&alpha];
-        return [QRColor colorWithHue:hue saturation:(saturation*0.7) brightness:brightness alpha:alpha];
-    }
-    else { // return a hue-wise complement at the same luminance
-        CGFloat hue, saturation, brightness, alpha, compliment = 0;
-        [color getHue:&hue saturation:&saturation brightness:&brightness alpha:&alpha];
-        compliment = (hue > 0.5 ? hue - 0.5 : hue + 0.5);
-        CGFloat desaturated = (saturation*0.7);
-        CGFloat luminance = ((brightness >= 0.6) ? 0.4 : 0.9);
-        return [QRColor colorWithHue:compliment saturation:desaturated brightness:luminance alpha:alpha];
-    }
-}
-#endif
-
 @implementation QRCodeView
 {
     QRImage* cachedCodeImage;
@@ -83,20 +56,6 @@ QRColor* QRComplementaryBackgroundColor(QRColor* color) {
     BOOL changed = (_codeColor != codeColor);
     _codeColor = codeColor;
     if (changed) {
-#if TARGET_OS_IPHONE
-        if (self.complementaryBackground) {
-            self.backgroundColor = QRComplementaryBackgroundColor(self.codeColor);
-        }
-#endif
-        [self clearImageCache];
-    }
-}
-
-- (void) setComplementaryBackground:(BOOL)complementaryBackground
-{
-    BOOL changed = (_complementaryBackground != complementaryBackground);
-    _complementaryBackground = complementaryBackground;
-    if (changed) {
         [self clearImageCache];
     }
 }
@@ -111,13 +70,6 @@ QRColor* QRComplementaryBackgroundColor(QRColor* color) {
 
 - (void)drawRect:(CGRect)rect
 {
-#if TARGET_OS_MAC && !TARGET_OS_IPHONE
-    if (self.complementaryBackground) {
-        NSColor* complement = QRComplementaryBackgroundColor(self.codeColor);
-        [complement setFill];
-        [NSBezierPath fillRect:rect];
-    }
-#endif
     [self.codeImage drawInRect:[self insetSquare]];
 }
 
@@ -142,6 +94,7 @@ QRColor* QRComplementaryBackgroundColor(QRColor* color) {
 }
 #endif
 
-#endif
+#endif // TARGET_OS_WATCH
 
 @end
+

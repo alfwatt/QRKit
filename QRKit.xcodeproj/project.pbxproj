@@ -293,10 +293,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7510745019D0ACFC00C85851 /* QRKit.h in Headers */,
-				7510746519D0AE5500C85851 /* QRCoder.h in Headers */,
-				7510746919D0AE8100C85851 /* QRCodeScanner.h in Headers */,
 				755ECCC61BE2A9D700638366 /* QRDefines.h in Headers */,
+				7510746519D0AE5500C85851 /* QRCoder.h in Headers */,
 				7510746F19D0C6B200C85851 /* QRCodeView.h in Headers */,
+				7510746919D0AE8100C85851 /* QRCodeScanner.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,9 +305,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				758A252C1BE0962800E3576A /* QRKit.h in Headers */,
-				758A252D1BE0962E00E3576A /* QRCodeView.h in Headers */,
 				755ECCC71BE2A9D700638366 /* QRDefines.h in Headers */,
 				758A252B1BE0962400E3576A /* QRCoder.h in Headers */,
+				758A252D1BE0962E00E3576A /* QRCodeView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
