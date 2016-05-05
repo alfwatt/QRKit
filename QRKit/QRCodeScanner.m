@@ -81,6 +81,11 @@
 
 - (void) initView
 {
+    if (!self.cameraIsAvailable) {
+        [self setupNoCameraView];
+        return;
+    }
+
     self.device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     
     self.input = [AVCaptureDeviceInput deviceInputWithDevice:self.device error:nil];
@@ -175,9 +180,9 @@
     }
 }
 
-#pragma mark - Public Methods
+#pragma mark - IBActions
 
-- (void)startScanning;
+- (IBAction) startScanning:(id) sender
 {
     [self.session startRunning];
     if ([self.delegate respondsToSelector:@selector(scanViewControllerDidStartScanning:)]) {
@@ -185,7 +190,7 @@
     }
 }
 
-- (void) stopScanning;
+- (IBAction) stopScanning:(id) sender
 {
     [self.session stopRunning];
     if ([self.delegate respondsToSelector:@selector(scanViewControllerDidStartScanning:)]) {
@@ -217,7 +222,7 @@
     self.cameraLightIsOn = !(self.cameraLightIsOn); // toggle the torch
 }
 
-#pragma mark - NoCamAvailable
+#pragma mark - No Camera View
 
 - (void) setupNoCameraView
 {
@@ -229,8 +234,7 @@
     labelNoCam.center = self.view.center;
 }
 
-#pragma mark -
-#pragma mark AVCaptureMetadataOutputObjectsDelegate
+#pragma mark - AVCaptureMetadataOutputObjectsDelegate
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects
        fromConnection:(AVCaptureConnection *)connection

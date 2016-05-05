@@ -9,15 +9,15 @@
 /** @class QRCodeScanner a view which scans for QR coode with an overlay */
 @interface QRCodeScanner : UIViewController <AVCaptureMetadataOutputObjectsDelegate>
 
-@property(nonatomic, readonly) NSString* decodedString;
 @property(nonatomic, assign) id<QRCodeScannerDelegate> delegate;
+@property(nonatomic, readonly) NSString* decodedString;
 @property(nonatomic, readonly) BOOL cameraIsAvailable;
 @property(nonatomic, assign) BOOL cameraLightIsOn;
 
 - (id) initWithView:(UIView*) view delegate:(id<QRCodeScannerDelegate>) delegate;
 
-- (void) startScanning;
-- (void) stopScanning;
+- (IBAction) startScanning:(id) sender;
+- (IBAction) stopScanning:(id) sender;
 
 @end
 

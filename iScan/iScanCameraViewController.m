@@ -11,7 +11,7 @@
     self.scanText.text = @"Setting up Camera";
     self.scanner = [[QRCodeScanner alloc] initWithView:self.scanView delegate:self];
     if (self.scanner.cameraIsAvailable) {
-        [self.scanner startScanning];
+        [self.scanner startScanning:self];
     }
     else {
         NSLog(@"No camera: %@", self.scanner);
@@ -59,5 +59,10 @@
     self.scanText.text = [NSString stringWithFormat:@"Focus: %@", NSStringFromCGPoint(aPoint)];
 }
 
+- (void) scanViewControllerDidStopScanning:(QRCodeScanner*) scanner
+{
+    NSLog(@"scanViewControllerDidStopScanning: %@", scanner);
+    self.scanText.text = @"Stopped";
+}
 
 @end
