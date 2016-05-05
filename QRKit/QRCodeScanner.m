@@ -193,8 +193,8 @@
 - (IBAction) stopScanning:(id) sender
 {
     [self.session stopRunning];
-    if ([self.delegate respondsToSelector:@selector(scanViewControllerDidStartScanning:)]) {
-        [self.delegate scanViewControllerDidStartScanning:self];
+    if ([self.delegate respondsToSelector:@selector(scanViewControllerDidStopScanning:)]) {
+        [self.delegate scanViewControllerDidStopScanning:self];
     }
 }
 
