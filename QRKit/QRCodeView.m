@@ -1,11 +1,15 @@
 #import "QRCodeView.h"
 #import "QRCoder.h"
 
+@interface QRCodeView ()
+@property(nonatomic, retain) QRImage* codeImageStorage;
+@property(nonatomic, retain) NSString* codeStringStorage;
+
+@end
+
+#pragma mark -
+
 @implementation QRCodeView
-{
-    QRImage* cachedCodeImage;
-    NSString* cachedCodeString;
-}
 
 #if !TARGET_OS_WATCH
 - (CGRect) insetSquare
@@ -21,7 +25,7 @@
 
 - (void) clearImageCache
 {
-    cachedCodeImage = nil;
+    self.codeImageStorage = nil;
 #if TARGET_OS_IPHONE || TARGET_OS_TV
     [self setNeedsDisplay];
 #else
@@ -34,20 +38,25 @@
 
 - (QRImage*) codeImage
 {
-    if( !cachedCodeImage) {
-        cachedCodeImage = [QRCoder QRCodeFromString:self.codeString withAttributes:self.codeAttributes withSize:[self insetSquare].size codeColor:self.codeColor];
+    if( !self.codeImageStorage) {
+        self.codeImageStorage = [QRCoder
+            QRCodeFromString:self.codeString
+            withAttributes:self.codeAttributes
+            withSize:[self insetSquare].size
+            codeColor:self.codeColor
+            backgroundColor:self.backgroundColor];
     }
-    return cachedCodeImage;
+    return self.codeImageStorage;
 }
 
 - (NSString*) codeString
 {
-    return cachedCodeString;
+    return [self.codeStringStorage copy];
 }
 
 - (void) setCodeString:(NSString *)encodedString
 {
-    cachedCodeString = encodedString;
+    self.codeStringStorage = encodedString;
     [self clearImageCache];
 }
 
@@ -70,7 +79,8 @@
 
 - (void)drawRect:(CGRect)rect
 {
-    [self.codeImage drawInRect:[self insetSquare]];
+//    [self.codeImage drawInRect:[self insetSquare]];
+    [self.codeImage drawInRect:[self insetSquare] blendMode:kCGBlendModeNormal alpha:1.0];
 }
 
 #if TARGET_OS_IPHONE || TARGET_OS_TV
@@ -78,8 +88,7 @@
 
 - (void) layoutSubviews
 {
-    cachedCodeImage = nil;
-    [self setNeedsDisplay];
+    [self clearImageCache];
     [super layoutSubviews];
 }
 
@@ -88,8 +97,7 @@
 
 - (void)setFrameSize:(NSSize)newSize
 {
-    cachedCodeImage = nil; // invalidate the image cache when resizing
-    [self setNeedsDisplay:YES];
+    [self clearImageCache];
     [super setFrameSize:newSize];
 }
 #endif

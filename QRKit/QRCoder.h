@@ -26,13 +26,15 @@ static NSString* const QRCIPDF417BarcodeGenerator = @"CIPDF417BarcodeGenerator";
 @interface QRCoder : NSObject
 
 /** @return a QRImage (NSImage, UIImage or WKImage) with a QRCode for the string provided at the size requested */
-+ (QRImage*) QRCodeFromString:(NSString*) string withAttributes:(NSDictionary*) attributes withSize:(CGSize) size codeColor:(QRColor*) color;
++ (QRImage*) QRCodeFromString:(NSString*) string withAttributes:(NSDictionary*) attrs withSize:(CGSize) size codeColor:(QRColor*) color;
++ (QRImage*) QRCodeFromString:(NSString*) string withAttributes:(NSDictionary*) attrs withSize:(CGSize) size codeColor:(QRColor*) color backgroundColor:(QRColor*) background;
 
 /** @return a CIImage with a QRCode for the string provided at the size requested */
 #if TARGET_OS_WATCH
 + (CGImageRef) QRCodeImageFromString:(NSString*) string withAttributes:(NSDictionary*) attributes withSize:(CGSize) size codeColor:(CGColorRef) color
 #else
-+ (CIImage*) QRCodeImageFromString:(NSString*) string withAttributes:(NSDictionary*) attributes withSize:(CGSize) size codeColor:(CGColorRef) color;
++ (CIImage*) QRCodeImageFromString:(NSString*) string withAttributes:(NSDictionary*) attrs withSize:(CGSize) size codeColor:(CIColor*) color;
++ (CIImage*) QRCodeImageFromString:(NSString*) string withAttributes:(NSDictionary*) attrs withSize:(CGSize) size codeColor:(CIColor*) color backgroundColor:(CIColor*) background;
 #endif
 
 @end

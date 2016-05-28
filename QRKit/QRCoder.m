@@ -20,7 +20,14 @@
 
 + (UIImage*) QRCodeFromString:(NSString*) string withAttributes:(NSDictionary*) attrs withSize:(CGSize) size codeColor:(UIColor*)color
 {
-    CIImage* qrCode = [self QRCodeImageFromString:string withAttributes:attrs withSize:size codeColor:color.CGColor];
+    return [QRCoder QRCodeFromString:string withAttributes:attrs withSize:size codeColor:color backgroundColor:[UIColor clearColor]];
+}
+
++ (UIImage*) QRCodeFromString:(NSString*) string withAttributes:(NSDictionary*) attrs withSize:(CGSize) size codeColor:(UIColor*)color backgroundColor:(UIColor*)background
+{
+    CIColor* codeColor = [CIColor colorWithCGColor:color.CGColor];
+    CIColor* backgroundColor = [CIColor colorWithCGColor:background.CGColor];
+    CIImage* qrCode = [self QRCodeImageFromString:string withAttributes:attrs withSize:size codeColor:codeColor backgroundColor:backgroundColor];
     return [UIImage imageWithCIImage:qrCode];
 }
 
@@ -28,7 +35,14 @@
 
 + (NSImage*) QRCodeFromString:(NSString*) string withAttributes:(NSDictionary*) attrs withSize:(CGSize) size codeColor:(NSColor*)color
 {
-    NSCIImageRep* imageRep = [NSCIImageRep imageRepWithCIImage:[self QRCodeImageFromString:string withAttributes:attrs withSize:size codeColor:color.CGColor]];
+    return [QRColder QRCodeFromString:string withAttributes:attrs withSize:size codeColor:color backgroundColor:[NSColor clearColor]];
+}
+
++ (NSImage*) QRCodeFromString:(NSString*) string withAttributes:(NSDictionary*) attrs withSize:(CGSize) size codeColor:(NSColor*)color backgroundColor:(NSColor*)background
+{
+    CIColor* codeColor = [CIColor colorWithCGColor:color.CGColor];
+    CIColor* backgroundColor = [CIColor colorWithCGColor:background.CGColor];
+    NSCIImageRep* imageRep = [NSCIImageRep imageRepWithCIImage:[self QRCodeImageFromString:string withAttributes:attrs withSize:size codeColor:codeColor]];
     NSImage* image = [[NSImage alloc] initWithSize:NSSizeFromCGSize(size)];
     imageRep.size = NSSizeFromCGSize(size);
     [image addRepresentation:imageRep];
@@ -53,13 +67,20 @@
 
 */
 
-+ (CIImage*) QRCodeImageFromString:(NSString*) string withAttributes:(NSDictionary*) attrs withSize:(CGSize) size codeColor:(CGColorRef) color
++ (CIImage*) QRCodeImageFromString:(NSString*) string withAttributes:(NSDictionary*) attrs withSize:(CGSize) size codeColor:(CIColor*) color
+{
+    CIColor* clearColor = [CIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.0];
+    return [QRCoder QRCodeImageFromString:string withAttributes:attrs withSize:size codeColor:color backgroundColor:clearColor];
+}
+
++ (CIImage*) QRCodeImageFromString:(NSString*) string withAttributes:(NSDictionary*) attrs withSize:(CGSize) size codeColor:(CIColor*) color backgroundColor:(CIColor*) background
 {
     if( !string) { // catch a nil string here
         string = @"";
     }
-    CIColor* codeColor = (color ? [CIColor colorWithCGColor:color] : [CIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:1.0]);
-    CIColor* clearColor = [CIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.0];
+    CIColor* codeColor = (color ? color : [CIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:1.0]); // red
+    CIColor* backgroundColor = (background ? background : [CIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0]); // clear
+    // CIColor* whiteColor = [CIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
     // setup the QR Code filter
     NSData* stringData = [string dataUsingEncoding:NSISOLatin1StringEncoding];
     NSString* correctionLevel = QRInputCorrectionLevelM;
@@ -82,7 +103,7 @@
     CIFilter* codeColorFilter = [CIFilter filterWithName:@"CIFalseColor" withInputParameters:@{
         kCIInputImageKey:codeImage,
         @"inputColor0":codeColor,
-        @"inputColor1":clearColor
+        @"inputColor1":backgroundColor
     }];
     CIImage* coloredImage = codeColorFilter.outputImage;
 
