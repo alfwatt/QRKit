@@ -35,13 +35,13 @@
 
 + (NSImage*) QRCodeFromString:(NSString*) string withAttributes:(NSDictionary*) attrs withSize:(CGSize) size codeColor:(NSColor*)color
 {
-    return [QRColder QRCodeFromString:string withAttributes:attrs withSize:size codeColor:color backgroundColor:[NSColor clearColor]];
+    return [QRCoder QRCodeFromString:string withAttributes:attrs withSize:size codeColor:color backgroundColor:[NSColor clearColor]];
 }
 
 + (NSImage*) QRCodeFromString:(NSString*) string withAttributes:(NSDictionary*) attrs withSize:(CGSize) size codeColor:(NSColor*)color backgroundColor:(NSColor*)background
 {
     CIColor* codeColor = [CIColor colorWithCGColor:color.CGColor];
-    CIColor* backgroundColor = [CIColor colorWithCGColor:background.CGColor];
+    // CIColor* backgroundColor = [CIColor colorWithCGColor:background.CGColor];
     NSCIImageRep* imageRep = [NSCIImageRep imageRepWithCIImage:[self QRCodeImageFromString:string withAttributes:attrs withSize:size codeColor:codeColor]];
     NSImage* image = [[NSImage alloc] initWithSize:NSSizeFromCGSize(size)];
     imageRep.size = NSSizeFromCGSize(size);

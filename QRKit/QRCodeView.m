@@ -44,7 +44,7 @@
             withAttributes:self.codeAttributes
             withSize:[self insetSquare].size
             codeColor:self.codeColor
-            backgroundColor:self.backgroundColor];
+            backgroundColor:(self.layer.backgroundColor ? [QRColor colorWithCGColor:self.layer.backgroundColor] : nil)];
     }
     return self.codeImageStorage;
 }
@@ -79,8 +79,11 @@
 
 - (void)drawRect:(CGRect)rect
 {
-//    [self.codeImage drawInRect:[self insetSquare]];
+#if TARGET_OS_IPHONE || TARGET_OS_TV
     [self.codeImage drawInRect:[self insetSquare] blendMode:kCGBlendModeNormal alpha:1.0];
+#else
+    [self.codeImage drawInRect:[self insetSquare]];
+#endif
 }
 
 #if TARGET_OS_IPHONE || TARGET_OS_TV
