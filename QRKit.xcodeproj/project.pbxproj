@@ -452,11 +452,13 @@
 		7510744119D0ACFB00C85851 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = iStumbler;
 				TargetAttributes = {
 					7510744919D0ACFC00C85851 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = E8G8ARB44Z;
+						DevelopmentTeamName = "Alf Watt";
 					};
 					758A25121BE0914400E3576A = {
 						CreatedOnToolsVersion = 7.1;
@@ -467,6 +469,13 @@
 					};
 					758A25521BE1CBDD00E3576A = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = E8G8ARB44Z;
+						DevelopmentTeamName = "Alf Watt";
+						ProvisioningStyle = Automatic;
+					};
+					75DD05791CB771E50090C6C1 = {
+						DevelopmentTeam = E8G8ARB44Z;
+						DevelopmentTeamName = "Alf Watt";
 					};
 					75DD059D1CB7778E0090C6C1 = {
 						CreatedOnToolsVersion = 7.3;
@@ -662,6 +671,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -703,6 +713,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -841,6 +852,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
@@ -861,6 +873,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
