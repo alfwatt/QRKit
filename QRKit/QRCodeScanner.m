@@ -27,9 +27,9 @@
 - (BOOL) cameraIsAvailable
 {
     NSArray *videoDevices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
-    return [videoDevices count] > 0;
+    return ([videoDevices count] > 0);
 }
-
+ 
 - (BOOL) cameraLightIsOn
 {
     AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
