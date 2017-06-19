@@ -53,6 +53,25 @@ To scan a QR Code on iOS use QRCodeScanner, avaliable for UIKit:
 
     @end
 
+## Versions
+
+### 1.0 QRTV 1.0
+
+### 1.1 
+
++ QRCoder demo application
++ Extract QRTV to a seperate project
++ complementary colors
+
+### 1.2
+
++ Explicit Background Colors in Demo Application 
+
+### 1.3
+
++ iCoder can save QRCodes as tiff files
++ Updated template graphics
++ 
 
 ## License
 
