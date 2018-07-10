@@ -2,8 +2,6 @@
 
 #import <QRKit/QRDefines.h>
 
-/* based on https://gist.github.com/Alex04/6976945 */
-
 @protocol QRCodeScannerDelegate;
 
 /** @class QRCodeScanner a view which scans for QR coode with an overlay */

@@ -1,6 +1,8 @@
 #import "QRCodeScanner.h"
 #import "QRCoder.h"
 
+/* based on https://gist.github.com/Alex04/6976945 */
+
 @interface QRCodeScanner ()
 
 @property(nonatomic, retain) NSString* decodedStringStorage;
